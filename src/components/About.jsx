@@ -30,13 +30,9 @@ export default function About() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            The{" "}
-            <b>
-              1st International Conference on Mechanical & Industrial
-              Technologies (IC-MIT 2025)
-            </b>{" "}
-            will be held at <b>MIT Muzaffarpur, Bihar, India</b> on{" "}
-            <b>May 24-25, 2025</b>. The conference serves as a platform for
+            The 1st International Conference on Mechanical & Industrial
+            Technologies (IC-MIT 2025) will be held at MIT Muzaffarpur, Bihar,
+            India on May 24-25, 2025. The conference serves as a platform for
             researchers, academics, scientists, and professionals to present
             innovative contributions in Mechanical & Industrial Engineering.
           </motion.p>
@@ -61,25 +57,25 @@ export default function About() {
               </h3>
             </div>
             <p className="mt-4 text-gray-300 leading-relaxed">
-              Established in **1954**, **Muzaffarpur Institute of Technology
-              (MIT)** is one of the **oldest and most prestigious** technical
-              institutions in Eastern India. The institute is fully funded by
-              the **Government of Bihar** and is affiliated with **Bihar
-              Engineering University (BEU), Patna**.
+              Established in 1954, Muzaffarpur Institute of Technology (MIT) is
+              one of the oldest and most prestigious technical institutions in
+              Eastern India. The institute is fully funded by the Government of
+              Bihar and is affiliated with Bihar Engineering University (BEU),
+              Patna.
             </p>
             <ul className="mt-4 text-gray-300 text-sm space-y-2">
               <li>
-                🎓 Offers **undergraduate** programs in **Civil, Mechanical,
-                Electrical, Computer Science, Electronics, and more.**
+                🎓 Offers undergraduate programs in Civil, Mechanical,
+                Electrical, Computer Science, Electronics, and more.
               </li>
               <li>
-                📚 Provides **postgraduate** programs in **Geotechnical,
+                📚 Provides postgraduate programs in Geotechnical,
                 Transportation, Thermal, Electrical Energy, and Advanced
-                Electronics.**
+                Electronics.
               </li>
               <li>
-                🏆 Encourages research activities and hosts **workshops,
-                placements, alumni meets, and technical events.**
+                🏆 Encourages research activities and hosts workshops,
+                placements, alumni meets, and technical events.
               </li>
               <li>
                 🔗 Website:{" "}
@@ -110,20 +106,19 @@ export default function About() {
               </h3>
             </div>
             <p className="mt-4 text-gray-300 leading-relaxed">
-              **Darbhanga College of Engineering (DCE)**, established in
-              **2008**, is a **government engineering college** affiliated with
-              **Bihar Engineering University (BEU), Patna**. It was previously
-              known as **JMIT (Jagannath Mishra Institute of Technology)**.
+              Darbhanga College of Engineering (DCE), established in 2008, is a
+              government engineering college affiliated with Bihar Engineering
+              University (BEU), Patna. It was previously known as JMIT
+              (Jagannath Mishra Institute of Technology).
             </p>
             <ul className="mt-4 text-gray-300 text-sm space-y-2">
               <li>
-                🏗️ Offers **undergraduate** programs in **Civil, Mechanical,
+                🏗️ Offers undergraduate programs in Civil, Mechanical,
                 Electrical & Electronics, Computer Science, Cyber Security, and
-                Fire & Safety Engineering.**
+                Fire & Safety Engineering.
               </li>
               <li>
-                🎓 Provides **postgraduate** programs in **Power Systems
-                Engineering.**
+                🎓 Provides postgraduate programs in Power Systems Engineering.
               </li>
               <li>
                 🔗 Website:{" "}
