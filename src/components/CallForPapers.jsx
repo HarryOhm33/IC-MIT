@@ -52,26 +52,32 @@ export default function CallForPapers() {
 
         {/* Submission Guidelines */}
         <motion.div
-          className="mt-10 bg-gray-800/70 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-gray-700"
+          className="mt-10 bg-gray-850/80 backdrop-blur-lg p-6 rounded-2xl shadow-lg border border-gray-700"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-semibold text-yellow-400">
+          {/* Title */}
+          <h3 className="text-2xl font-semibold text-yellow-300">
             📄 Submission Guidelines
           </h3>
+
+          {/* Description */}
           <p className="mt-3 text-gray-300">
-            Authors must submit their research papers in **PDF format** via the
-            online submission portal. All submissions will undergo a
-            **double-blind peer review** process.
+            Authors must submit their research papers in{" "}
+            <strong>PDF format</strong> via the online submission portal. All
+            submissions will undergo a<strong> double-blind peer review</strong>{" "}
+            process.
           </p>
-          <div className="mt-4 p-4 bg-yellow-900/30 backdrop-blur-md rounded-lg border border-yellow-500 text-yellow-300 text-center">
-            <p className="font-semibold">
-              📅 **Submission Deadline:** April 15, 2025
+
+          {/* Deadline Box */}
+          <div className="mt-4 p-4 bg-yellow-700/40 backdrop-blur-md rounded-lg border border-yellow-400 text-yellow-200 text-center shadow-md">
+            <p className="font-semibold text-lg">
+              📅 <strong>Submission Deadline:</strong> April 15, 2025
             </p>
-            <p className="font-semibold">
-              📢 **Notification of Acceptance:** April 20, 2025
+            <p className="font-semibold text-lg mt-2">
+              📢 <strong>Notification of Acceptance:</strong> April 20, 2025
             </p>
           </div>
         </motion.div>
