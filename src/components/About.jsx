@@ -25,14 +25,20 @@ export default function About() {
             About the Conference
           </motion.h2>
           <motion.p
-            className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto"
+            className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            IC-MIT 2025 is an international forum for researchers, academics,
-            and industry professionals to discuss advancements in Mechanical &
-            Industrial Technologies.
+            The{" "}
+            <b>
+              1st International Conference on Mechanical & Industrial
+              Technologies (IC-MIT 2025)
+            </b>{" "}
+            will be held at <b>MIT Muzaffarpur, Bihar, India</b> on{" "}
+            <b>May 24-25, 2025</b>. The conference serves as a platform for
+            researchers, academics, scientists, and professionals to present
+            innovative contributions in Mechanical & Industrial Engineering.
           </motion.p>
         </motion.div>
 
@@ -54,13 +60,37 @@ export default function About() {
                 MIT Muzaffarpur
               </h3>
             </div>
-            <p className="mt-4 text-gray-300">
-              Established in 1954, MIT Muzaffarpur is one of the oldest
-              technical institutions in eastern India. It operates under the
-              Department of Science, Technology, and Technical Education, Bihar
-              Government, and is affiliated with Bihar Engineering University,
-              Patna.
+            <p className="mt-4 text-gray-300 leading-relaxed">
+              Established in **1954**, **Muzaffarpur Institute of Technology
+              (MIT)** is one of the **oldest and most prestigious** technical
+              institutions in Eastern India. The institute is fully funded by
+              the **Government of Bihar** and is affiliated with **Bihar
+              Engineering University (BEU), Patna**.
             </p>
+            <ul className="mt-4 text-gray-300 text-sm space-y-2">
+              <li>
+                🎓 Offers **undergraduate** programs in **Civil, Mechanical,
+                Electrical, Computer Science, Electronics, and more.**
+              </li>
+              <li>
+                📚 Provides **postgraduate** programs in **Geotechnical,
+                Transportation, Thermal, Electrical Energy, and Advanced
+                Electronics.**
+              </li>
+              <li>
+                🏆 Encourages research activities and hosts **workshops,
+                placements, alumni meets, and technical events.**
+              </li>
+              <li>
+                🔗 Website:{" "}
+                <a
+                  href="https://www.mitmuzaffarpur.org"
+                  className="text-yellow-400 hover:underline"
+                >
+                  MIT Official Website
+                </a>
+              </li>
+            </ul>
           </motion.div>
 
           {/* About DCE Darbhanga */}
@@ -79,13 +109,32 @@ export default function About() {
                 DCE Darbhanga
               </h3>
             </div>
-            <p className="mt-4 text-gray-300">
-              Darbhanga College of Engineering, established in 2008, is a
-              government-owned institution affiliated with Bihar Engineering
-              University, Patna. It offers undergraduate programs in Civil,
-              Mechanical, Electrical & Electronics, Computer Science, Cyber
-              Security, and Fire Technology & Safety Engineering.
+            <p className="mt-4 text-gray-300 leading-relaxed">
+              **Darbhanga College of Engineering (DCE)**, established in
+              **2008**, is a **government engineering college** affiliated with
+              **Bihar Engineering University (BEU), Patna**. It was previously
+              known as **JMIT (Jagannath Mishra Institute of Technology)**.
             </p>
+            <ul className="mt-4 text-gray-300 text-sm space-y-2">
+              <li>
+                🏗️ Offers **undergraduate** programs in **Civil, Mechanical,
+                Electrical & Electronics, Computer Science, Cyber Security, and
+                Fire & Safety Engineering.**
+              </li>
+              <li>
+                🎓 Provides **postgraduate** programs in **Power Systems
+                Engineering.**
+              </li>
+              <li>
+                🔗 Website:{" "}
+                <a
+                  href="https://dcedarbhanga.org"
+                  className="text-yellow-400 hover:underline"
+                >
+                  DCE Official Website
+                </a>
+              </li>
+            </ul>
           </motion.div>
         </div>
       </div>
