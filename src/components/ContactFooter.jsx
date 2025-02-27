@@ -9,8 +9,11 @@ import {
 
 export default function ContactFooter() {
   return (
-    <footer id="contact" className="bg-black text-gray-200 py-12">
-      <div className="max-w-6xl mx-auto px-6">
+    <footer
+      id="contact"
+      className="bg-black text-gray-200 py-12 w-full overflow-hidden"
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Contact Section */}
         <motion.div
           className="text-center"
@@ -40,7 +43,7 @@ export default function ContactFooter() {
 
         {/* Footer Links */}
         <motion.div
-          className="mt-8 flex flex-wrap justify-center gap-6 text-lg"
+          className="mt-8 flex flex-wrap justify-center w-full max-w-full gap-4 text-lg"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -66,7 +69,7 @@ export default function ContactFooter() {
 
         {/* Social Media Links */}
         <motion.div
-          className="mt-6 flex justify-center gap-4"
+          className="mt-6 flex flex-wrap justify-center w-full max-w-full gap-4"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -89,7 +92,7 @@ export default function ContactFooter() {
 
         {/* Copyright */}
         <motion.div
-          className="mt-6 text-center text-sm text-gray-400"
+          className="mt-6 text-center text-sm text-gray-400 overflow-hidden"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
