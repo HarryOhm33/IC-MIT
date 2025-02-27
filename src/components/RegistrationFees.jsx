@@ -138,33 +138,30 @@ export default function RegistrationFees() {
               </tr>
             </tbody>
           </table>
-
-          {/* Payment Details */}
-          <div className="mt-6 text-center text-gray-300">
-            <h3 className="text-xl font-bold text-yellow-400">
-              Payment Details
-            </h3>
-            <p>
-              Account No: <span className="text-white">10352068714</span>
-            </p>
-            <p>Account Name: IND SOC TECH EDU CHA MIT</p>
-            <p>Branch: Lakshmi Chowk, Muzaffarpur</p>
-            <p>
-              IFSC Code: <span className="text-white">SBIN0004603</span>
-            </p>
-            <p>Bank Name: State Bank of India</p>
-
-            {/* Register Link */}
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeX9Z5ufOunq30T5X3Q-BJeqPc7Kr5-GzQYGSCoVuvecMYCSQ/viewform?pli=1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-block bg-yellow-500 text-black font-bold py-2 px-6 rounded-lg shadow-md hover:bg-yellow-600 transition duration-300"
-            >
-              Register Now
-            </a>
-          </div>
         </motion.div>
+        {/* Payment Details */}
+        <div className="mt-6 text-center text-gray-300">
+          <h3 className="text-xl font-bold text-yellow-400">Payment Details</h3>
+          <p>
+            Account No: <span className="text-white">10352068714</span>
+          </p>
+          <p>Account Name: IND SOC TECH EDU CHA MIT</p>
+          <p>Branch: Lakshmi Chowk, Muzaffarpur</p>
+          <p>
+            IFSC Code: <span className="text-white">SBIN0004603</span>
+          </p>
+          <p>Bank Name: State Bank of India</p>
+
+          {/* Register Link */}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeX9Z5ufOunq30T5X3Q-BJeqPc7Kr5-GzQYGSCoVuvecMYCSQ/viewform?pli=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-block bg-yellow-500 text-black font-bold py-2 px-6 rounded-lg shadow-md hover:bg-yellow-600 transition duration-300"
+          >
+            Register Now
+          </a>
+        </div>
       </div>
     </section>
   );
