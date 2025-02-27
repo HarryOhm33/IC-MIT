@@ -1,50 +1,72 @@
 import React from "react";
-// import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import heroImage from "../assets/hero_img.png"; // Ensure the correct path
 
 const Hero = () => {
   return (
-    <section className="relative flex flex-col lg:flex-row items-center justify-center min-h-screen bg-gray-900 text-white px-6 md:px-12">
+    <section
+      id="home"
+      className="relative flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen bg-gray-900 text-white px-6 md:px-12 pt-20 lg:pt-0" // Added pt-20 for navbar spacing
+      style={{ scrollMarginTop: "80px" }} // Ensures smooth scrolling without overlap
+    >
       {/* Text Content */}
       <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-        className="lg:w-1/2 text-center lg:text-left"
+        initial={{ opacity: 0, y: 50, scale: 0.9 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="lg:w-1/2 text-center lg:text-left mt-8 lg:mt-0"
       >
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
+        <motion.h1
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-4xl md:text-5xl font-bold leading-tight mb-4"
+        >
           1st International Conference on Mechanical & Industrial Technologies
           <span className="text-yellow-400"> (IC-MIT 2025)</span>
-        </h1>
-        <p className="text-lg md:text-xl mb-6">
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-lg md:text-xl mb-6"
+        >
           Jointly organized by MIT Muzaffarpur & Darbhanga College of
           Engineering
-        </p>
-        <button
-          style={{ cursor: "pointer" }}
-          onClick={() =>
-            document
-              .getElementById("about")
-              .scrollIntoView({ behavior: "smooth" })
-          }
-          className="bg-yellow-400 text-gray-900 hover:bg-yellow-500 px-6 py-3 rounded-lg text-lg transition-all duration-300"
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
         >
-          Learn More
-        </button>
+          <button
+            style={{ cursor: "pointer" }}
+            onClick={() =>
+              document
+                .getElementById("about")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+            className="bg-yellow-400 text-gray-900 hover:bg-yellow-500 px-6 py-3 rounded-lg text-lg transition-all duration-300"
+          >
+            Learn More
+          </button>
+        </motion.div>
       </motion.div>
 
       {/* Image */}
       <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-        className="lg:w-1/2 mt-8 lg:mt-0"
+        initial={{ opacity: 0, y: 50, scale: 0.9 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="lg:w-1/2"
       >
-        <img
+        <motion.img
           src={heroImage}
           alt="Conference Banner"
           className="rounded-lg shadow-lg w-full max-w-md mx-auto lg:max-w-full"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
         />
       </motion.div>
     </section>
