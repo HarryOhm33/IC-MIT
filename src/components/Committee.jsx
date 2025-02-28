@@ -72,7 +72,7 @@ export default function Committee() {
             <span className="text-blue-600 font-semibold">
               Prof. (Dr.) Sandeep Tiwari
             </span>{" "}
-            – DCE Darbhanga
+            – Principle, DCE Darbhanga
           </p>
         </motion.div>
 
@@ -92,7 +92,7 @@ export default function Committee() {
             <span className="text-blue-600 font-semibold">
               Dr. Ashish K Srivastava
             </span>{" "}
-            – MIT Muzaffarpur
+            – <i> Associate Professor</i>, MIT Muzaffarpur
           </p>
         </motion.div>
 
@@ -113,104 +113,107 @@ export default function Committee() {
               <span className="text-blue-600 font-semibold">
                 Dr. Tirumalai S. Srivatsan
               </span>
-              , University of Akron, USA
+              ,<i> Professor (Emeritus)</i>, The University of Akron, USA
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Sergej Hloch
               </span>
-              , Technical University of Kosice, Slovakia
+              ,<i> Professor</i>, Technical University of Kosice, Slovakia
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Ing. Robert Čep
               </span>
-              , VŠB-Technical University of Ostrava, Czechia
+              ,<i> Professor</i>, VŠB-Technical University of Ostrava, Czechia
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Jana Petrů
               </span>
-              , VŠB-Technical University of Ostrava, Czechia
+              ,<i> Professor</i>, VŠB-Technical University of Ostrava, Czechia
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Grzegorz Krolczyk
               </span>
-              , Opole University of Technology, Poland
+              ,<i> Professor</i>, Opole University of Technology, Poland
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Dmitry Eskin
               </span>
-              , Brunel University of London, UK
+              ,<i> Professor</i>, Brunel University of London, UK
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Anton FICAI
               </span>
-              , National University of Science and POLITECHNICA Bucharest,
-              Romania
+              ,<i> Professor</i>, National University of Science and
+              POLITECHNICA Bucharest, Romania
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Kapil Gupta
               </span>
-              , University of Johannesburg, South Africa
+              ,<i> Professor</i>, University of Johannesburg, South Africa
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
-                Dr. Alessandro RUGGIERO
+                Dr. Alessandro Ruggiero
               </span>
-              , University of Salerno, Fisciano
+              ,<i> Professor</i>, University of Salerno, Fisciano
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Velaphi Msomi
               </span>
-              , University of South Africa
+              ,<i> Associate Professor</i>, University of South Africa
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Alokesh Pramanik
               </span>
-              , Curtin University, Australia
+              ,<i> Senior Lecturer</i>, Curtin University, Australia
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">Dr. Akash Nag</span>
-              , VŠB-Technical University of Ostrava, Czechia
+              ,<i> Assistant Professor</i>, VŠB-Technical University of Ostrava,
+              Czechia
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Munish Kumar Gupta
               </span>
-              , Opole University of Technology, Poland
+              ,<i> Assistant Professor</i>, Opole University of Technology,
+              Poland
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Tanmay Tiwari
               </span>
-              , University of Akron, USA
+              ,<i> Assistant Professor</i>, University of Akron, USA
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Showkat Ahmad Bhawani
               </span>
-              , Universiti Malaysia Sarawak, Malaysia
+              ,<i> Assistant Professor</i>, Universiti Malaysia Sarawak,
+              Malaysia
             </li>
             <li>
               🔹{" "}
@@ -239,131 +242,131 @@ export default function Committee() {
               <span className="text-blue-600 font-semibold">
                 Dr. Amit Rai Dixit
               </span>
-              , IIT, ISM Dhanbad
+              ,<i> Professor</i>, IIT, ISM Dhanbad
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Manabendra Pathak
               </span>
-              , IIT Patna
+              ,<i> Professor</i>, IIT Patna
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Om Prakash
               </span>
-              , NIT Patna
+              ,<i> Professor</i>, NIT Patna
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Andalib Tariq
               </span>
-              , IIT Roorkee
+              ,<i> Professor</i>, IIT Roorkee
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Vaibhava Srivastava
               </span>
-              , BHU, Varanasi
+              ,<i> Professor</i>, BHU, Varanasi
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Ranjan Das
               </span>
-              , NIT Agartala
+              ,<i> Professor</i>, NIT Agartala
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Amit Kumar
               </span>
-              , NIT Patna
+              ,<i> Professor</i>, NIT Patna
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Karali Patra
               </span>
-              , IIT Patna
+              ,<i> Professor</i>, IIT Patna
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Alok Kumar Das
               </span>
-              , IIT, ISM Dhanbad
+              ,<i> Professor</i>, IIT, ISM Dhanbad
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Prabir Kumar Saha
               </span>
-              , IIT Patna
+              ,<i> Associate Professor</i>, IIT Patna
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Himanshu Pathak
               </span>
-              , IIT Mandi
+              ,<i> Associate Professor</i>, IIT Mandi
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Koushik Das
               </span>
-              , NIT Meghalaya
+              ,<i> Associate Professor</i>, NIT Meghalaya
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Abhishek Singh
               </span>
-              , NIT Patna
+              ,<i> Associate Professor</i>, NIT Patna
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Raj Kumar Sahu
               </span>
-              , NIT Raipur
+              ,<i> Assistant Professor</i>, NIT Raipur
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Chandrakant Nirala
               </span>
-              , IIT Ropar
+              ,<i> Assistant Professor</i>, IIT Ropar
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Sagnik Pal
               </span>
-              , NIT Agartala
+              ,<i> Assistant Professor</i>, NIT Agartala
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Yogesh Kumar
               </span>
-              , NIT Patna
+              ,<i> Assistant Professor</i>, NIT Patna
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">Dr. Prabhansu</span>
-              , NIT Surat
+              ,<i> Assistant Professor</i>, NIT Surat
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Sabindra Kachhap
               </span>
-              , NIT Manipur
+              ,<i> Assistant Professor</i>, NIT Manipur
             </li>
           </ul>
         </motion.div>

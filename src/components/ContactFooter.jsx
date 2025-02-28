@@ -2,9 +2,12 @@ import { motion } from "framer-motion";
 import {
   FaEnvelope,
   FaMapMarkerAlt,
+  FaPhone,
   FaFacebook,
   FaTwitter,
   FaLinkedin,
+  FaInstagram,
+  FaYoutube,
 } from "react-icons/fa";
 
 export default function ContactFooter() {
@@ -26,6 +29,8 @@ export default function ContactFooter() {
           <p className="mt-4 text-lg text-gray-700">
             For any queries, feel free to reach out:
           </p>
+
+          {/* Email */}
           <p className="mt-2 flex justify-center items-center gap-2 text-gray-700">
             <FaEnvelope className="text-blue-600" />
             <a
@@ -35,15 +40,31 @@ export default function ContactFooter() {
               conference.me@mitmuzaffarpur.org
             </a>
           </p>
+
+          {/* Phone */}
+          <p className="mt-2 flex justify-center items-center gap-2 text-gray-700">
+            <FaPhone className="text-blue-600" />
+            <a
+              href="tel:+919876543210"
+              className="hover:text-blue-600 transition duration-300"
+            >
+              +91 98765 43210
+            </a>
+          </p>
+
+          {/* Location */}
           <p className="mt-2 flex justify-center items-center gap-2 text-gray-700">
             <FaMapMarkerAlt className="text-blue-600" />
             MIT Muzaffarpur, Bihar, India
           </p>
         </motion.div>
 
+        {/* Divider */}
+        <div className="border-t border-gray-300 my-8"></div>
+
         {/* Footer Links */}
         <motion.div
-          className="mt-8 flex flex-wrap justify-center w-full max-w-full gap-4 text-lg"
+          className="flex flex-wrap justify-center w-full max-w-full gap-4 text-lg"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -55,6 +76,8 @@ export default function ContactFooter() {
             { href: "#call-for-papers", label: "Call for Papers" },
             { href: "#dates", label: "Important Dates" },
             { href: "#registration", label: "Registration" },
+            { href: "#committee", label: "Committee" },
+            { href: "#editorial-board", label: "Editorial Board" },
             { href: "#venue", label: "Venue" },
           ].map((link, index) => (
             <a
@@ -67,23 +90,30 @@ export default function ContactFooter() {
           ))}
         </motion.div>
 
+        {/* Divider */}
+        <div className="border-t border-gray-300 my-8"></div>
+
         {/* Social Media Links */}
         <motion.div
-          className="mt-6 flex flex-wrap justify-center w-full max-w-full gap-4"
+          className="flex flex-wrap justify-center w-full max-w-full gap-4"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
           viewport={{ once: true }}
         >
           {[
-            { icon: FaFacebook, href: "#" },
-            { icon: FaTwitter, href: "#" },
-            { icon: FaLinkedin, href: "#" },
+            { icon: FaFacebook, href: "https://facebook.com/icmit2025" },
+            { icon: FaTwitter, href: "https://twitter.com/icmit2025" },
+            { icon: FaLinkedin, href: "https://linkedin.com/icmit2025" },
+            { icon: FaInstagram, href: "https://instagram.com/icmit2025" },
+            { icon: FaYoutube, href: "https://youtube.com/icmit2025" },
           ].map((social, index) => (
             <a
               key={index}
               href={social.href}
               className="text-blue-600 hover:text-blue-700 transition duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <social.icon size={24} />
             </a>

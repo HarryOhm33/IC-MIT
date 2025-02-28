@@ -39,9 +39,13 @@ export default function Venue() {
               ✈️ <span className="text-blue-600 font-semibold">By Air:</span>{" "}
               The nearest airport is{" "}
               <span className="text-blue-600">
-                Jai Prakash Narayan International Airport, Patna
+                Jai Prakash Narayan International Airport, Patna&nbsp;
               </span>
-              , about 2-3 hours away by taxi.
+              (about 2-3 hours away by taxi) and&nbsp;
+              <span className="text-blue-600">
+                Darbhanga Airport, Darbhanga&nbsp;
+              </span>
+              (about 1-2 hours away by taxi).
             </li>
             <li>
               🚆 <span className="text-blue-600 font-semibold">By Rail:</span>{" "}

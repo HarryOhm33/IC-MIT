@@ -29,61 +29,63 @@ export default function EditorialBoard() {
               <span className="text-blue-600 font-semibold">
                 Dr. Sergej Hloch
               </span>
-              , Technical University of Kosice, Slovakia
+              ,<i> Professor</i>, Technical University of Kosice, Slovakia
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Amit Rai Dixit
               </span>
-              , IIT, ISM Dhanbad
+              ,<i> Professor</i>, IIT, ISM Dhanbad
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Showkat Ahmad Bhawani
               </span>
-              , Universiti Malaysia Sarawak, Malaysia
+              ,<i> Assistant Professor</i>, Universiti Malaysia Sarawak,
+              Malaysia
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Ashish Kumar Srivastava
               </span>
-              , MIT Muzaffarpur
+              ,<i> Associate Professor</i>, MIT Muzaffarpur
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">Dr. Akash Nag</span>
-              , VŠB-Technical University of Ostrava, Czechia
+              ,<i> Assistant Professor</i>, VŠB-Technical University of Ostrava,
+              Czechia
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Tanmay Tiwari
               </span>
-              , University of Akron, USA
+              ,<i> Assistant Professor</i>, University of Akron, USA
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Raj Kumar Sahu
               </span>
-              , NIT Raipur
+              ,<i> Assistant Professor</i>, NIT Raipur
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Dr. Ajay Kumar
               </span>
-              , JECRC University Rajasthan
+              ,<i> JECRC University Rajasthan</i>
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
                 Miss. Avril Zhang
               </span>
-              , Taiyuan University of Technology, China
+              ,<i> Taiyuan University of Technology, China</i>
             </li>
           </ul>
         </motion.div>
