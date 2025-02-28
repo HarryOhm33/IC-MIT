@@ -96,6 +96,31 @@ export default function Committee() {
           </p>
         </motion.div>
 
+        {/* Organising Secretary */}
+        <motion.div
+          className="mt-6 bg-white p-6 rounded-2xl shadow-lg border border-gray-200"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-2xl font-semibold text-blue-600">
+            Organising Secretary
+          </h3>
+
+          <p className="mt-2 text-gray-700">
+            🎓{" "}
+            <span className="text-blue-600 font-semibold">Dr. Alok Ranjan</span>{" "}
+            – MIT Muzaffarpur
+          </p>
+
+          <p className="mt-2 text-gray-700">
+            🎓{" "}
+            <span className="text-blue-600 font-semibold">Mr. Ankit Kumar</span>{" "}
+            – DCE Darbhanga
+          </p>
+        </motion.div>
+
         {/* International Advisory Board */}
         <motion.div
           className="mt-6 bg-white p-6 rounded-2xl shadow-lg border border-gray-200"
