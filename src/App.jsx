@@ -7,6 +7,7 @@ import RegistrationFees from "./components/RegistrationFees";
 import Committee from "./components/Committee";
 import Venue from "./components/Venue";
 import ContactFooter from "./components/ContactFooter";
+import EditorialBoard from "./components/EditorialBoard";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <ImportantDates />
       <RegistrationFees />
       <Committee />
+      <EditorialBoard />
       <Venue />
       <ContactFooter />
     </div>

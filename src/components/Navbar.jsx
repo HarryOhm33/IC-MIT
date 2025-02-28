@@ -21,14 +21,25 @@ export default function Navbar() {
         "dates",
         "registration",
         "venue",
+        "committee",
+        "editorial-board",
         "contact",
       ];
+
+      let foundSection = "home"; // Default to home
+
       for (const section of sections) {
         const element = document.getElementById(section);
-        if (element && element.getBoundingClientRect().top <= 100) {
-          setActiveSection(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            foundSection = section;
+            break;
+          }
         }
       }
+
+      setActiveSection(foundSection);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -115,6 +126,30 @@ export default function Navbar() {
           >
             Registration
           </Link>
+          <Link
+            to="committee"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
+              activeSection === "committee" ? "text-blue-600" : ""
+            }`}
+          >
+            Committee
+          </Link>
+
+          <Link
+            to="editorial-board"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
+              activeSection === "editorial-board" ? "text-blue-600" : ""
+            }`}
+          >
+            Editorial Board
+          </Link>
+
           <Link
             to="venue"
             smooth={true}
