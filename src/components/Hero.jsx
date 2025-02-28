@@ -31,8 +31,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-lg md:text-xl mb-6"
         >
-          Jointly organized by MIT Muzaffarpur & Darbhanga College of
-          Engineering
+          Jointly organized by MIT Muzaffarpur, Darbhanga College of
+          Engineering, and Indian Society For Technical Education
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

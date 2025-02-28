@@ -261,139 +261,143 @@ export default function Committee() {
           <h3 className="text-2xl font-semibold text-blue-600">
             National Advisory Board
           </h3>
-          <ul className="mt-2 text-gray-700 space-y-2">
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Amit Rai Dixit
-              </span>
-              ,<i> Professor</i>, IIT, ISM Dhanbad
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Manabendra Pathak
-              </span>
-              ,<i> Professor</i>, IIT Patna
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Om Prakash
-              </span>
-              ,<i> Professor</i>, NIT Patna
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Andalib Tariq
-              </span>
-              ,<i> Professor</i>, IIT Roorkee
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Vaibhava Srivastava
-              </span>
-              ,<i> Professor</i>, BHU, Varanasi
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Ranjan Das
-              </span>
-              ,<i> Professor</i>, NIT Agartala
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Amit Kumar
-              </span>
-              ,<i> Professor</i>, NIT Patna
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Karali Patra
-              </span>
-              ,<i> Professor</i>, IIT Patna
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Alok Kumar Das
-              </span>
-              ,<i> Professor</i>, IIT, ISM Dhanbad
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Prabir Kumar Saha
-              </span>
-              ,<i> Associate Professor</i>, IIT Patna
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Himanshu Pathak
-              </span>
-              ,<i> Associate Professor</i>, IIT Mandi
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Koushik Das
-              </span>
-              ,<i> Associate Professor</i>, NIT Meghalaya
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Abhishek Singh
-              </span>
-              ,<i> Associate Professor</i>, NIT Patna
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Raj Kumar Sahu
-              </span>
-              ,<i> Assistant Professor</i>, NIT Raipur
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Chandrakant Nirala
-              </span>
-              ,<i> Assistant Professor</i>, IIT Ropar
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Sagnik Pal
-              </span>
-              ,<i> Assistant Professor</i>, NIT Agartala
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Yogesh Kumar
-              </span>
-              ,<i> Assistant Professor</i>, NIT Patna
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">Dr. Prabhansu</span>
-              ,<i> Assistant Professor</i>, NIT Surat
-            </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Dr. Sabindra Kachhap
-              </span>
-              ,<i> Assistant Professor</i>, NIT Manipur
-            </li>
-          </ul>
+          <div className="mt-2">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Amit Rai Dixit
+                </span>
+                ,<i> Professor</i>, IIT, ISM Dhanbad
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Manabendra Pathak
+                </span>
+                ,<i> Professor</i>, IIT Patna
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Om Prakash
+                </span>
+                ,<i> Professor</i>, NIT Patna
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Andalib Tariq
+                </span>
+                ,<i> Professor</i>, IIT Roorkee
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Vaibhava Srivastava
+                </span>
+                ,<i> Professor</i>, BHU, Varanasi
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Ranjan Das
+                </span>
+                ,<i> Professor</i>, NIT Agartala
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Amit Kumar
+                </span>
+                ,<i> Professor</i>, NIT Patna
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Karali Patra
+                </span>
+                ,<i> Professor</i>, IIT Patna
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Alok Kumar Das
+                </span>
+                ,<i> Professor</i>, IIT, ISM Dhanbad
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Prabir Kumar Saha
+                </span>
+                ,<i> Associate Professor</i>, IIT Patna
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Himanshu Pathak
+                </span>
+                ,<i> Associate Professor</i>, IIT Mandi
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Koushik Das
+                </span>
+                ,<i> Associate Professor</i>, NIT Meghalaya
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Abhishek Singh
+                </span>
+                ,<i> Associate Professor</i>, NIT Patna
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Raj Kumar Sahu
+                </span>
+                ,<i> Assistant Professor</i>, NIT Raipur
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Chandrakant Nirala
+                </span>
+                ,<i> Assistant Professor</i>, IIT Ropar
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Sagnik Pal
+                </span>
+                ,<i> Assistant Professor</i>, NIT Agartala
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Yogesh Kumar
+                </span>
+                ,<i> Assistant Professor</i>, NIT Patna
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Prabhansu
+                </span>
+                ,<i> Assistant Professor</i>, NIT Surat
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Sabindra Kachhap
+                </span>
+                ,<i> Assistant Professor</i>, NIT Manipur
+              </li>
+            </ul>
+          </div>
         </motion.div>
       </div>
     </section>

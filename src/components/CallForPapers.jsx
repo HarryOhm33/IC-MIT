@@ -36,15 +36,23 @@ export default function CallForPapers() {
           <h3 className="text-2xl font-semibold text-blue-600">
             📌 Conference Themes
           </h3>
-          <ul className="mt-4 space-y-2 text-gray-700">
-            <li>✔️ Material Science and Engineering</li>
-            <li>✔️ Materials Manufacturing and Processing</li>
-            <li>✔️ Nanotechnology & Smart Materials</li>
-            <li>✔️ Thermal and Fluid Engineering</li>
-            <li>✔️ Additive Manufacturing</li>
-            <li>✔️ Industrial Automation</li>
-            <li>✔️ Advanced Control Techniques</li>
-          </ul>
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-700">
+            <div>✔️ Material Science and Engineering</div>
+            <div>✔️ Automated & Digital Manufacturing</div>
+            <div>✔️ Materials Manufacturing and Processing</div>
+            <div>✔️ Materials properties measuring methods</div>
+            <div>✔️ Smart Manufacturing and application</div>
+            <div>✔️ Automation Technology</div>
+            <div>✔️ Friction, Wear, and Lubrication</div>
+            <div>✔️ Industrial Automation</div>
+            <div>✔️ Nanotechnology & Smart Materials</div>
+            <div>✔️ Advanced Control Techniques</div>
+            <div>✔️ Thermal and Fluid Engineering</div>
+            <div>✔️ Biocompatible Material</div>
+            <div>✔️ Additive Manufacturing</div>
+            <div>✔️ Natural Material</div>
+            <div>✔️ Kinematics and Dynamics</div>
+          </div>
         </motion.div>
 
         {/* Submission Guidelines */}
