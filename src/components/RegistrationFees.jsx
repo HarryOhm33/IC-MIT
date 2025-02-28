@@ -27,10 +27,10 @@ export default function RegistrationFees() {
             <thead>
               <tr className="bg-blue-100 text-blue-600">
                 <th className="p-4 text-lg">Registration Category</th>
-                <th className="p-4 text-lg">
+                <th className="p-4 text-lg text-center">
                   Early Bird (Before April 30, 2025)
                 </th>
-                <th className="p-4 text-lg">
+                <th className="p-4 text-lg text-center">
                   Late Registration (From May 1, 2025)
                 </th>
               </tr>
@@ -44,23 +44,23 @@ export default function RegistrationFees() {
               </tr>
               <tr className="border-t border-gray-200">
                 <td className="p-4">🔬 Research Scholar</td>
-                <td className="p-4">₹2500</td>
-                <td className="p-4">₹3500</td>
+                <td className="p-4 text-center">₹2500</td>
+                <td className="p-4 text-center">₹3500</td>
               </tr>
               <tr className="border-t border-gray-200">
                 <td className="p-4">📚 Faculty Member</td>
-                <td className="p-4">₹4000</td>
-                <td className="p-4">₹5000</td>
+                <td className="p-4 text-center">₹4000</td>
+                <td className="p-4 text-center">₹5000</td>
               </tr>
               <tr className="border-t border-gray-200">
                 <td className="p-4">🏢 Industry Person</td>
-                <td className="p-4">₹7000</td>
-                <td className="p-4">₹8000</td>
+                <td className="p-4 text-center">₹7000</td>
+                <td className="p-4 text-center">₹8000</td>
               </tr>
               <tr className="border-t border-gray-200">
                 <td className="p-4">👥 Accompanying Person</td>
-                <td className="p-4">₹3000</td>
-                <td className="p-4">₹3000</td>
+                <td className="p-4 text-center">₹3000</td>
+                <td className="p-4 text-center">₹3000</td>
               </tr>
 
               {/* Foreign National */}
@@ -71,18 +71,18 @@ export default function RegistrationFees() {
               </tr>
               <tr className="border-t border-gray-200">
                 <td className="p-4">🔬 Research Scholar</td>
-                <td className="p-4">$30</td>
-                <td className="p-4">$60</td>
+                <td className="p-4 text-center">$30</td>
+                <td className="p-4 text-center">$60</td>
               </tr>
               <tr className="border-t border-gray-200">
                 <td className="p-4">📚 Faculty Person</td>
-                <td className="p-4">$50</td>
-                <td className="p-4">$150</td>
+                <td className="p-4 text-center">$50</td>
+                <td className="p-4 text-center">$150</td>
               </tr>
               <tr className="border-t border-gray-200">
                 <td className="p-4">🏢 Industry Person</td>
-                <td className="p-4">$80</td>
-                <td className="p-4">$150</td>
+                <td className="p-4 text-center">$80</td>
+                <td className="p-4 text-center">$150</td>
               </tr>
             </tbody>
           </table>
