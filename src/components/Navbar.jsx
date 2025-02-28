@@ -1,15 +1,37 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
-import { Link } from "react-scroll"; // Import the Link component from react-scroll
+import { Link } from "react-scroll";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const mobileMenuRef = useRef(null); // Ref for the mobile menu
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  // Close the mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target) &&
+        isOpen
+      ) {
+        setIsOpen(false); // Close the menu
+      }
+    };
+
+    // Add event listener for clicks outside the mobile menu
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup the event listener
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   // Highlight active section on scroll
   useEffect(() => {
@@ -62,8 +84,8 @@ export default function Navbar() {
             to="home"
             smooth={true}
             duration={500}
-            offset={-80} // Adjust offset if needed
-            className="cursor-pointer" // Add cursor-pointer here
+            offset={-80}
+            className="cursor-pointer"
           >
             IC-MIT 2025
           </Link>
@@ -137,7 +159,6 @@ export default function Navbar() {
           >
             Committee
           </Link>
-
           <Link
             to="editorial-board"
             smooth={true}
@@ -149,7 +170,6 @@ export default function Navbar() {
           >
             Editorial Board
           </Link>
-
           <Link
             to="venue"
             smooth={true}
@@ -186,6 +206,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <motion.div
+          ref={mobileMenuRef} // Attach the ref to the mobile menu
           className="md:hidden bg-white p-4 space-y-4 text-center text-gray-900 shadow-lg border-t border-gray-200"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -250,6 +271,30 @@ export default function Navbar() {
             onClick={toggleMenu}
           >
             Registration
+          </Link>
+          <Link
+            to="committee"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
+              activeSection === "committee" ? "text-blue-600" : ""
+            }`}
+            onClick={toggleMenu}
+          >
+            Committee
+          </Link>
+          <Link
+            to="editorial-board"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
+              activeSection === "editorial-board" ? "text-blue-600" : ""
+            }`}
+            onClick={toggleMenu}
+          >
+            Editorial Board
           </Link>
           <Link
             to="venue"
