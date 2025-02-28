@@ -11,32 +11,32 @@ export default function ContactFooter() {
   return (
     <footer
       id="contact"
-      className="bg-black text-gray-200 py-12 w-full overflow-hidden"
+      className="bg-white text-gray-900 py-12 w-full overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Contact Section */}
         <motion.div
-          className="text-center"
+          className="text-center bg-blue-50 p-6 rounded-2xl shadow-lg border border-blue-100"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold text-yellow-400">Contact Us</h2>
-          <p className="mt-4 text-lg text-gray-300">
+          <h2 className="text-3xl font-bold text-blue-600">Contact Us</h2>
+          <p className="mt-4 text-lg text-gray-700">
             For any queries, feel free to reach out:
           </p>
-          <p className="mt-2 flex justify-center items-center gap-2 text-gray-300">
-            <FaEnvelope className="text-yellow-400" />
+          <p className="mt-2 flex justify-center items-center gap-2 text-gray-700">
+            <FaEnvelope className="text-blue-600" />
             <a
               href="mailto:conference.me@mitmuzaffarpur.org"
-              className="hover:text-yellow-400 transition duration-300"
+              className="hover:text-blue-600 transition duration-300"
             >
               conference.me@mitmuzaffarpur.org
             </a>
           </p>
-          <p className="mt-2 flex justify-center items-center gap-2 text-gray-300">
-            <FaMapMarkerAlt className="text-yellow-400" />
+          <p className="mt-2 flex justify-center items-center gap-2 text-gray-700">
+            <FaMapMarkerAlt className="text-blue-600" />
             MIT Muzaffarpur, Bihar, India
           </p>
         </motion.div>
@@ -60,7 +60,7 @@ export default function ContactFooter() {
             <a
               key={index}
               href={link.href}
-              className="hover:text-yellow-400 transition duration-300"
+              className="hover:text-blue-600 transition duration-300"
             >
               {link.label}
             </a>
@@ -83,7 +83,7 @@ export default function ContactFooter() {
             <a
               key={index}
               href={social.href}
-              className="text-yellow-400 hover:text-yellow-500 transition duration-300"
+              className="text-blue-600 hover:text-blue-700 transition duration-300"
             >
               <social.icon size={24} />
             </a>
@@ -92,7 +92,7 @@ export default function ContactFooter() {
 
         {/* Copyright */}
         <motion.div
-          className="mt-6 text-center text-sm text-gray-400 overflow-hidden"
+          className="mt-6 text-center text-sm text-gray-500 overflow-hidden"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}

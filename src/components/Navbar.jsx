@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
+import { Link } from "react-scroll"; // Import the Link component from react-scroll
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,16 +9,6 @@ export default function Navbar() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  };
-
-  // Smooth scroll to section
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(id);
-      setIsOpen(false); // Close mobile menu after clicking a link
-    }
   };
 
   // Highlight active section on scroll
@@ -29,6 +20,7 @@ export default function Navbar() {
         "call-for-papers",
         "dates",
         "registration",
+        "venue",
         "contact",
       ];
       for (const section of sections) {
@@ -53,72 +45,103 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
         <h1
           className="text-blue-600 text-2xl font-bold cursor-pointer"
-          onClick={() => scrollToSection("home")}
+          onClick={() => setActiveSection("home")}
         >
-          IC-MIT 2025
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            offset={-80} // Adjust offset if needed
+            className="cursor-pointer" // Add cursor-pointer here
+          >
+            IC-MIT 2025
+          </Link>
         </h1>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 text-gray-900">
-          <a
-            href="#home"
-            className={`hover:text-blue-600 transition-colors duration-300 ${
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
               activeSection === "home" ? "text-blue-600" : ""
             }`}
-            onClick={() => scrollToSection("home")}
           >
             Home
-          </a>
-          <a
-            href="#about"
-            className={`hover:text-blue-600 transition-colors duration-300 ${
+          </Link>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
               activeSection === "about" ? "text-blue-600" : ""
             }`}
-            onClick={() => scrollToSection("about")}
           >
             About
-          </a>
-          <a
-            href="#call-for-papers"
-            className={`hover:text-blue-600 transition-colors duration-300 ${
+          </Link>
+          <Link
+            to="call-for-papers"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
               activeSection === "call-for-papers" ? "text-blue-600" : ""
             }`}
-            onClick={() => scrollToSection("call-for-papers")}
           >
             Call for Papers
-          </a>
-          <a
-            href="#dates"
-            className={`hover:text-blue-600 transition-colors duration-300 ${
+          </Link>
+          <Link
+            to="dates"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
               activeSection === "dates" ? "text-blue-600" : ""
             }`}
-            onClick={() => scrollToSection("dates")}
           >
             Important Dates
-          </a>
-          <a
-            href="#registration"
-            className={`hover:text-blue-600 transition-colors duration-300 ${
+          </Link>
+          <Link
+            to="registration"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
               activeSection === "registration" ? "text-blue-600" : ""
             }`}
-            onClick={() => scrollToSection("registration")}
           >
             Registration
-          </a>
-          <a
-            href="#contact"
-            className={`hover:text-blue-600 transition-colors duration-300 ${
+          </Link>
+          <Link
+            to="venue"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
+              activeSection === "venue" ? "text-blue-600" : ""
+            }`}
+          >
+            Venue
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
               activeSection === "contact" ? "text-blue-600" : ""
             }`}
-            onClick={() => scrollToSection("contact")}
           >
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-900 hover:text-blue-600 transition-colors duration-300"
+          className="md:hidden text-gray-900 hover:text-blue-600 transition-colors duration-300 cursor-pointer"
           onClick={toggleMenu}
         >
           {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
@@ -133,60 +156,90 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
-          <a
-            href="#home"
-            className={`block hover:text-blue-600 transition-colors duration-300 ${
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
               activeSection === "home" ? "text-blue-600" : ""
             }`}
-            onClick={() => scrollToSection("home")}
+            onClick={toggleMenu}
           >
             Home
-          </a>
-          <a
-            href="#about"
-            className={`block hover:text-blue-600 transition-colors duration-300 ${
+          </Link>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
               activeSection === "about" ? "text-blue-600" : ""
             }`}
-            onClick={() => scrollToSection("about")}
+            onClick={toggleMenu}
           >
             About
-          </a>
-          <a
-            href="#call-for-papers"
-            className={`block hover:text-blue-600 transition-colors duration-300 ${
+          </Link>
+          <Link
+            to="call-for-papers"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
               activeSection === "call-for-papers" ? "text-blue-600" : ""
             }`}
-            onClick={() => scrollToSection("call-for-papers")}
+            onClick={toggleMenu}
           >
             Call for Papers
-          </a>
-          <a
-            href="#dates"
-            className={`block hover:text-blue-600 transition-colors duration-300 ${
+          </Link>
+          <Link
+            to="dates"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
               activeSection === "dates" ? "text-blue-600" : ""
             }`}
-            onClick={() => scrollToSection("dates")}
+            onClick={toggleMenu}
           >
             Important Dates
-          </a>
-          <a
-            href="#registration"
-            className={`block hover:text-blue-600 transition-colors duration-300 ${
+          </Link>
+          <Link
+            to="registration"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
               activeSection === "registration" ? "text-blue-600" : ""
             }`}
-            onClick={() => scrollToSection("registration")}
+            onClick={toggleMenu}
           >
             Registration
-          </a>
-          <a
-            href="#contact"
-            className={`block hover:text-blue-600 transition-colors duration-300 ${
+          </Link>
+          <Link
+            to="venue"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
+              activeSection === "venue" ? "text-blue-600" : ""
+            }`}
+            onClick={toggleMenu}
+          >
+            Venue
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
               activeSection === "contact" ? "text-blue-600" : ""
             }`}
-            onClick={() => scrollToSection("contact")}
+            onClick={toggleMenu}
           >
             Contact
-          </a>
+          </Link>
         </motion.div>
       )}
     </motion.nav>

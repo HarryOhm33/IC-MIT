@@ -79,6 +79,7 @@ export default function About() {
                 <a
                   href="https://www.mitmuzaffarpur.org"
                   className="text-blue-600 hover:underline"
+                  target="_blank"
                 >
                   MIT Official Website
                 </a>
@@ -120,8 +121,9 @@ export default function About() {
               <li>
                 🔗 Website:{" "}
                 <a
-                  href="https://dcedarbhanga.org"
+                  href="https://www.dce-darbhanga.org/"
                   className="text-blue-600 hover:underline"
+                  target="_blank"
                 >
                   DCE Official Website
                 </a>
