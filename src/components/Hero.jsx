@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen bg-gray-900 text-white px-6 md:px-12 pt-20 lg:pt-0" // Added pt-20 for navbar spacing
+      className="relative flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen bg-white text-gray-900 px-6 md:px-12 pt-20 lg:pt-0"
       style={{ scrollMarginTop: "80px" }} // Ensures smooth scrolling without overlap
     >
       {/* Text Content */}
@@ -23,7 +23,7 @@ const Hero = () => {
           className="text-4xl md:text-5xl font-bold leading-tight mb-4"
         >
           1st International Conference on Mechanical & Industrial Technologies
-          <span className="text-yellow-400"> (IC-MIT 2025)</span>
+          <span className="text-blue-600"> (IC-MIT 2025)</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, x: -50 }}
@@ -46,7 +46,7 @@ const Hero = () => {
                 .getElementById("about")
                 .scrollIntoView({ behavior: "smooth" })
             }
-            className="bg-yellow-400 text-gray-900 hover:bg-yellow-500 px-6 py-3 rounded-lg text-lg transition-all duration-300"
+            className="bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-lg text-lg transition-all duration-300 shadow-lg"
           >
             Learn More
           </button>
@@ -63,7 +63,7 @@ const Hero = () => {
         <motion.img
           src={heroImage}
           alt="Conference Banner"
-          className="rounded-lg shadow-lg w-full max-w-md mx-auto lg:max-w-full"
+          className="rounded-lg shadow-xl w-full max-w-md mx-auto lg:max-w-full"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}

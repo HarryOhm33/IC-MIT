@@ -45,25 +45,25 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 w-full bg-gray-900 shadow-md z-50"
+      className="fixed top-0 left-0 w-full bg-white shadow-md z-50"
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
         <h1
-          className="text-yellow-400 text-2xl font-bold cursor-pointer"
+          className="text-blue-600 text-2xl font-bold cursor-pointer"
           onClick={() => scrollToSection("home")}
         >
           IC-MIT 2025
         </h1>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6 text-gray-300">
+        <div className="hidden md:flex space-x-6 text-gray-900">
           <a
             href="#home"
-            className={`hover:text-yellow-400 transition-colors duration-300 ${
-              activeSection === "home" ? "text-yellow-400" : ""
+            className={`hover:text-blue-600 transition-colors duration-300 ${
+              activeSection === "home" ? "text-blue-600" : ""
             }`}
             onClick={() => scrollToSection("home")}
           >
@@ -71,8 +71,8 @@ export default function Navbar() {
           </a>
           <a
             href="#about"
-            className={`hover:text-yellow-400 transition-colors duration-300 ${
-              activeSection === "about" ? "text-yellow-400" : ""
+            className={`hover:text-blue-600 transition-colors duration-300 ${
+              activeSection === "about" ? "text-blue-600" : ""
             }`}
             onClick={() => scrollToSection("about")}
           >
@@ -80,8 +80,8 @@ export default function Navbar() {
           </a>
           <a
             href="#call-for-papers"
-            className={`hover:text-yellow-400 transition-colors duration-300 ${
-              activeSection === "call-for-papers" ? "text-yellow-400" : ""
+            className={`hover:text-blue-600 transition-colors duration-300 ${
+              activeSection === "call-for-papers" ? "text-blue-600" : ""
             }`}
             onClick={() => scrollToSection("call-for-papers")}
           >
@@ -89,8 +89,8 @@ export default function Navbar() {
           </a>
           <a
             href="#dates"
-            className={`hover:text-yellow-400 transition-colors duration-300 ${
-              activeSection === "dates" ? "text-yellow-400" : ""
+            className={`hover:text-blue-600 transition-colors duration-300 ${
+              activeSection === "dates" ? "text-blue-600" : ""
             }`}
             onClick={() => scrollToSection("dates")}
           >
@@ -98,8 +98,8 @@ export default function Navbar() {
           </a>
           <a
             href="#registration"
-            className={`hover:text-yellow-400 transition-colors duration-300 ${
-              activeSection === "registration" ? "text-yellow-400" : ""
+            className={`hover:text-blue-600 transition-colors duration-300 ${
+              activeSection === "registration" ? "text-blue-600" : ""
             }`}
             onClick={() => scrollToSection("registration")}
           >
@@ -107,8 +107,8 @@ export default function Navbar() {
           </a>
           <a
             href="#contact"
-            className={`hover:text-yellow-400 transition-colors duration-300 ${
-              activeSection === "contact" ? "text-yellow-400" : ""
+            className={`hover:text-blue-600 transition-colors duration-300 ${
+              activeSection === "contact" ? "text-blue-600" : ""
             }`}
             onClick={() => scrollToSection("contact")}
           >
@@ -118,7 +118,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-300 hover:text-yellow-400 transition-colors duration-300"
+          className="md:hidden text-gray-900 hover:text-blue-600 transition-colors duration-300"
           onClick={toggleMenu}
         >
           {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
@@ -128,15 +128,15 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <motion.div
-          className="md:hidden bg-gray-800 p-4 space-y-4 text-center text-gray-300 shadow-lg border-t border-gray-700"
+          className="md:hidden bg-white p-4 space-y-4 text-center text-gray-900 shadow-lg border-t border-gray-200"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <a
             href="#home"
-            className={`block hover:text-yellow-400 transition-colors duration-300 ${
-              activeSection === "home" ? "text-yellow-400" : ""
+            className={`block hover:text-blue-600 transition-colors duration-300 ${
+              activeSection === "home" ? "text-blue-600" : ""
             }`}
             onClick={() => scrollToSection("home")}
           >
@@ -144,8 +144,8 @@ export default function Navbar() {
           </a>
           <a
             href="#about"
-            className={`block hover:text-yellow-400 transition-colors duration-300 ${
-              activeSection === "about" ? "text-yellow-400" : ""
+            className={`block hover:text-blue-600 transition-colors duration-300 ${
+              activeSection === "about" ? "text-blue-600" : ""
             }`}
             onClick={() => scrollToSection("about")}
           >
@@ -153,8 +153,8 @@ export default function Navbar() {
           </a>
           <a
             href="#call-for-papers"
-            className={`block hover:text-yellow-400 transition-colors duration-300 ${
-              activeSection === "call-for-papers" ? "text-yellow-400" : ""
+            className={`block hover:text-blue-600 transition-colors duration-300 ${
+              activeSection === "call-for-papers" ? "text-blue-600" : ""
             }`}
             onClick={() => scrollToSection("call-for-papers")}
           >
@@ -162,8 +162,8 @@ export default function Navbar() {
           </a>
           <a
             href="#dates"
-            className={`block hover:text-yellow-400 transition-colors duration-300 ${
-              activeSection === "dates" ? "text-yellow-400" : ""
+            className={`block hover:text-blue-600 transition-colors duration-300 ${
+              activeSection === "dates" ? "text-blue-600" : ""
             }`}
             onClick={() => scrollToSection("dates")}
           >
@@ -171,8 +171,8 @@ export default function Navbar() {
           </a>
           <a
             href="#registration"
-            className={`block hover:text-yellow-400 transition-colors duration-300 ${
-              activeSection === "registration" ? "text-yellow-400" : ""
+            className={`block hover:text-blue-600 transition-colors duration-300 ${
+              activeSection === "registration" ? "text-blue-600" : ""
             }`}
             onClick={() => scrollToSection("registration")}
           >
@@ -180,8 +180,8 @@ export default function Navbar() {
           </a>
           <a
             href="#contact"
-            className={`block hover:text-yellow-400 transition-colors duration-300 ${
-              activeSection === "contact" ? "text-yellow-400" : ""
+            className={`block hover:text-blue-600 transition-colors duration-300 ${
+              activeSection === "contact" ? "text-blue-600" : ""
             }`}
             onClick={() => scrollToSection("contact")}
           >
