@@ -12,7 +12,7 @@ export default function Committee() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          🎓 Conference Committee
+          🎓 Advisory Boards and Committee
         </motion.h2>
 
         {/* Chief Patron */}
@@ -395,6 +395,107 @@ export default function Committee() {
                   Dr. Sabindra Kachhap
                 </span>
                 ,<i> Assistant Professor</i>, NIT Manipur
+              </li>
+            </ul>
+          </div>
+        </motion.div>
+
+        {/* Organizing Members */}
+        <motion.div
+          className="mt-6 bg-white p-6 rounded-2xl shadow-lg border border-gray-200"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-2xl font-semibold text-blue-600">
+            Organizing Members
+          </h3>
+          <div className="mt-2">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Mr. Irshad Alam
+                </span>
+                ,<i> AP, ME, MIT Muzaffarpur</i>
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Mr. Hemant Kr Choudhary
+                </span>
+                ,<i> AP, ME, MIT Muzaffarpur</i>
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Mr. Gulshan Kumar
+                </span>
+                ,<i> AP, ME, MIT Muzaffarpur</i>
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Mr. Irfan Haider
+                </span>
+                ,<i> AP, ME, MIT Muzaffarpur</i>
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Mr. Manhar Kumar Sah
+                </span>
+                ,<i> AP, ME, MIT Muzaffarpur</i>
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Jigesh Yadav
+                </span>
+                ,<i> AP, ME, MIT Muzaffarpur</i>
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Dr. Pramod Kumar
+                </span>
+                ,<i> AP, ME, MIT Muzaffarpur</i>
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Mr. Pappu Kumar
+                </span>
+                ,<i> AP, ME, MIT Muzaffarpur</i>
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Mrs. Shalini Anand
+                </span>
+                ,<i> AP, ME, MIT Muzaffarpur</i>
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Mr. Vikash Kumar
+                </span>
+                ,<i> AP, ME, MIT Muzaffarpur</i>
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Mrs. Priyanka Chopra
+                </span>
+                ,<i> AP, CE, MIT Muzaffarpur</i>
+              </li>
+              <li>
+                🔹{" "}
+                <span className="text-blue-600 font-semibold">
+                  Mr. Rishabh Sharma
+                </span>
+                ,<i> AP, CE, MIT Muzaffarpur</i>
               </li>
             </ul>
           </div>

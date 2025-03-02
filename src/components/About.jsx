@@ -28,10 +28,11 @@ export default function About() {
             transition={{ duration: 1, delay: 0.4 }}
           >
             The 1st International Conference on Mechanical & Industrial
-            Technologies (IC-MIT 2025) will be held at MIT Muzaffarpur, Bihar,
-            India on May 24-25, 2025. The conference serves as a platform for
-            researchers, academics, scientists, and professionals to present
-            innovative contributions in Mechanical & Industrial Engineering.
+            Technologies (IC-MIT 2025) will be held at Muzaffarpur Institute Of
+            Technology, Muzaffarpur, Bihar, India on May 24-25, 2025. The
+            conference serves as a platform for researchers, academics,
+            scientists, and professionals to present innovative contributions in
+            Mechanical & Industrial Engineering.
           </motion.p>
         </motion.div>
 
@@ -50,7 +51,7 @@ export default function About() {
                 <FaUniversity className="text-blue-600 text-2xl" />
               </div>
               <h3 className="text-2xl font-semibold text-blue-600">
-                MIT Muzaffarpur
+                Muzaffarpur Institute Of Technology
               </h3>
             </div>
             <p className="mt-4 text-gray-700 leading-relaxed">
@@ -100,7 +101,7 @@ export default function About() {
                 <FaGraduationCap className="text-blue-600 text-2xl" />
               </div>
               <h3 className="text-2xl font-semibold text-blue-600">
-                DCE Darbhanga
+                Darbhanga College Of Engineering
               </h3>
             </div>
             <p className="mt-4 text-gray-700 leading-relaxed">

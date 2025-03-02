@@ -25,7 +25,7 @@ export default function CallForPapers() {
           submit their original research papers in the following areas.
         </motion.p>
 
-        {/* Conference Themes */}
+        {/* Conference Tracks */}
         <motion.div
           className="mt-10 bg-white p-6 rounded-2xl shadow-lg border border-gray-200"
           initial={{ opacity: 0, x: -50 }}
@@ -34,24 +34,88 @@ export default function CallForPapers() {
           viewport={{ once: true }}
         >
           <h3 className="text-2xl font-semibold text-blue-600">
-            📌 Conference Themes
+            📌 Conference Tracks
           </h3>
-          <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-700">
-            <div>✔️ Material Science and Engineering</div>
-            <div>✔️ Automated & Digital Manufacturing</div>
-            <div>✔️ Materials Manufacturing and Processing</div>
-            <div>✔️ Materials properties measuring methods</div>
-            <div>✔️ Smart Manufacturing and application</div>
-            <div>✔️ Automation Technology</div>
-            <div>✔️ Friction, Wear, and Lubrication</div>
-            <div>✔️ Industrial Automation</div>
-            <div>✔️ Nanotechnology & Smart Materials</div>
-            <div>✔️ Advanced Control Techniques</div>
-            <div>✔️ Thermal and Fluid Engineering</div>
-            <div>✔️ Biocompatible Material</div>
-            <div>✔️ Additive Manufacturing</div>
-            <div>✔️ Natural Material</div>
-            <div>✔️ Kinematics and Dynamics</div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+            {[
+              {
+                title: "Materials Processing and Manufacturing Techniques",
+                topics: [
+                  "Additive Manufacturing and 3D Printing",
+                  "Advanced Welding and Joining Technologies",
+                  "Composite Materials: Design and Applications",
+                  "Materials Characterization Techniques",
+                  "Metal Forming and Machining Processes",
+                  "Nano-materials in Mechanical Engineering",
+                  "Robotics in Manufacturing",
+                  "Sustainable and Green Manufacturing",
+                  "Smart Materials and Structures",
+                  "Tribology and Surface Engineering",
+                ],
+              },
+              {
+                title: "Fluid Flow and Thermal Engineering",
+                topics: [
+                  "Advanced HVAC Systems",
+                  "Combustion and Fuel Technologies",
+                  "Cryogenics and Refrigeration",
+                  "Computational Fluid Dynamics",
+                  "Fluid Mechanics and Flow Analysis",
+                  "Heat Transfer Using Extended Surfaces",
+                  "Heat Exchangers and Cooling Technologies",
+                  "Heat Transfer and Thermal Management",
+                  "Thermodynamics and Energy Efficiency",
+                  "Turbo-machinery and Propulsion Systems",
+                  "Renewable Energy Systems",
+                  "Internal Combustion",
+                ],
+              },
+              {
+                title: "Design and Simulations",
+                topics: [
+                  "Mechanical System Design and Optimization Techniques",
+                  "Vibration Analysis and Control System",
+                  "Dynamics of Machinery",
+                  "Mechatronics",
+                  "Finite Element Analysis",
+                  "CAD/CAM and Simulation Techniques",
+                  "Structural Health Monitoring",
+                  "Design for Manufacturability and Assembly",
+                ],
+              },
+              {
+                title: "Automotive, Aerospace, and Marine Engineering",
+                topics: [
+                  "Advanced Vehicle Dynamics and Control",
+                  "Aerospace Propulsion and Aerodynamics",
+                  "Marine Structures and Systems",
+                  "Electric and Hybrid Vehicles",
+                  "Lightweight Materials for Transportation",
+                  "Automotive Powertrain Technologies",
+                  "Aerodynamics and Fluid-Structure Interaction",
+                  "Unmanned Aerial Vehicles",
+                ],
+              },
+            ].map((track, index) => (
+              <motion.div
+                key={index}
+                className="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <h4 className="text-xl font-semibold text-blue-600">
+                  {track.title}
+                </h4>
+                <ul className="mt-2 text-gray-700 space-y-2">
+                  {track.topics.map((topic, idx) => (
+                    <li key={idx}>✔️ {topic}</li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
@@ -63,16 +127,14 @@ export default function CallForPapers() {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          {/* Title */}
           <h3 className="text-2xl font-semibold text-blue-600">
             📄 Submission Guidelines
           </h3>
 
-          {/* Description */}
           <p className="mt-3 text-gray-700">
             Authors must submit their research papers in{" "}
             <strong>PDF format</strong> via the online submission portal. All
-            submissions will undergo a<strong> double-blind peer review</strong>{" "}
+            submissions will undergo a <strong>double-blind peer review</strong>{" "}
             process.
           </p>
 
@@ -84,6 +146,17 @@ export default function CallForPapers() {
             <p className="font-semibold text-lg mt-2">
               📢 <strong>Notification of Acceptance:</strong> April 20, 2025
             </p>
+          </div>
+
+          {/* Download Template Button */}
+          <div className="mt-6 text-center">
+            <a
+              href="/src/assets/paper-template.docx"
+              download="ICMIT_Paper_Template.docx"
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition-all duration-300"
+            >
+              📥 Download Paper Template
+            </a>
           </div>
         </motion.div>
       </div>
