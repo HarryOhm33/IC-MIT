@@ -20,7 +20,6 @@ function App() {
       <CallForPapers />
       <ImportantDates />
       <RegistrationFees />
-
       <Venue />
       <ContactFooter />
     </div>
