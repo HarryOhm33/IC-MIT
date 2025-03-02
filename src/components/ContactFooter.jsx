@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-scroll"; // Import React Scroll
 import {
   FaEnvelope,
   FaMapMarkerAlt,
@@ -62,7 +63,7 @@ export default function ContactFooter() {
         {/* Divider */}
         <div className="border-t border-gray-300 my-8"></div>
 
-        {/* Footer Links */}
+        {/* Footer Links with React Scroll */}
         <motion.div
           className="flex flex-wrap justify-center w-full max-w-full gap-4 text-lg"
           initial={{ opacity: 0, y: 50 }}
@@ -71,22 +72,25 @@ export default function ContactFooter() {
           viewport={{ once: true }}
         >
           {[
-            { href: "#home", label: "Home" },
-            { href: "#about", label: "About" },
-            { href: "#call-for-papers", label: "Call for Papers" },
-            { href: "#dates", label: "Important Dates" },
-            { href: "#registration", label: "Registration" },
-            { href: "#committee", label: "Committee" },
-            { href: "#editorial-board", label: "Editorial Board" },
-            { href: "#venue", label: "Venue" },
-          ].map((link, index) => (
-            <a
+            { to: "home", label: "Home" },
+            { to: "about", label: "About" },
+            { to: "committee", label: "Committee" },
+            { to: "editorial-board", label: "Editorial Board" },
+            { to: "call-for-papers", label: "Call for Papers" },
+            { to: "dates", label: "Important Dates" },
+            { to: "registration", label: "Registration" },
+            { to: "venue", label: "Venue" },
+          ].map((item, index) => (
+            <Link
               key={index}
-              href={link.href}
-              className="hover:text-blue-600 transition duration-300"
+              to={item.to}
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="hover:text-blue-600 transition duration-300 cursor-pointer"
             >
-              {link.label}
-            </a>
+              {item.label}
+            </Link>
           ))}
         </motion.div>
 
