@@ -15,11 +15,12 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Committee />
+      <EditorialBoard />
       <CallForPapers />
       <ImportantDates />
       <RegistrationFees />
-      <Committee />
-      <EditorialBoard />
+
       <Venue />
       <ContactFooter />
     </div>

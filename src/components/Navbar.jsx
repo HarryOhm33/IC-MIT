@@ -24,10 +24,8 @@ export default function Navbar() {
       }
     };
 
-    // Add event listener for clicks outside the mobile menu
     document.addEventListener("mousedown", handleClickOutside);
 
-    // Cleanup the event listener
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -39,16 +37,16 @@ export default function Navbar() {
       const sections = [
         "home",
         "about",
+        "committee",
+        "editorial-board",
         "call-for-papers",
         "dates",
         "registration",
         "venue",
-        "committee",
-        "editorial-board",
         "contact",
       ];
 
-      let foundSection = "home"; // Default to home
+      let foundSection = "home";
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -93,105 +91,30 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 text-gray-900">
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "home" ? "text-blue-600" : ""
-            }`}
-          >
-            Home
-          </Link>
-          <Link
-            to="about"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "about" ? "text-blue-600" : ""
-            }`}
-          >
-            About
-          </Link>
-          <Link
-            to="call-for-papers"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "call-for-papers" ? "text-blue-600" : ""
-            }`}
-          >
-            Call for Papers
-          </Link>
-          <Link
-            to="dates"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "dates" ? "text-blue-600" : ""
-            }`}
-          >
-            Important Dates
-          </Link>
-          <Link
-            to="registration"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "registration" ? "text-blue-600" : ""
-            }`}
-          >
-            Registration
-          </Link>
-          <Link
-            to="committee"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "committee" ? "text-blue-600" : ""
-            }`}
-          >
-            Committee
-          </Link>
-          <Link
-            to="editorial-board"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "editorial-board" ? "text-blue-600" : ""
-            }`}
-          >
-            Editorial Board
-          </Link>
-          <Link
-            to="venue"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "venue" ? "text-blue-600" : ""
-            }`}
-          >
-            Venue
-          </Link>
-          <Link
-            to="contact"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "contact" ? "text-blue-600" : ""
-            }`}
-          >
-            Contact
-          </Link>
+          {[
+            { to: "home", label: "Home" },
+            { to: "about", label: "About Us" },
+            { to: "committee", label: "Committee" },
+            { to: "editorial-board", label: "Editorial Board" },
+            { to: "call-for-papers", label: "Call for Papers" },
+            { to: "dates", label: "Important Dates" },
+            { to: "registration", label: "Registration" },
+            { to: "venue", label: "Venue" },
+            { to: "contact", label: "Contact" },
+          ].map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
+                activeSection === item.to ? "text-blue-600" : ""
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
 
         {/* Mobile Menu Button */}
@@ -206,120 +129,37 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <motion.div
-          ref={mobileMenuRef} // Attach the ref to the mobile menu
+          ref={mobileMenuRef}
           className="md:hidden bg-white p-4 space-y-4 text-center text-gray-900 shadow-lg border-t border-gray-200"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "home" ? "text-blue-600" : ""
-            }`}
-            onClick={toggleMenu}
-          >
-            Home
-          </Link>
-          <Link
-            to="about"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "about" ? "text-blue-600" : ""
-            }`}
-            onClick={toggleMenu}
-          >
-            About
-          </Link>
-          <Link
-            to="call-for-papers"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "call-for-papers" ? "text-blue-600" : ""
-            }`}
-            onClick={toggleMenu}
-          >
-            Call for Papers
-          </Link>
-          <Link
-            to="dates"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "dates" ? "text-blue-600" : ""
-            }`}
-            onClick={toggleMenu}
-          >
-            Important Dates
-          </Link>
-          <Link
-            to="registration"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "registration" ? "text-blue-600" : ""
-            }`}
-            onClick={toggleMenu}
-          >
-            Registration
-          </Link>
-          <Link
-            to="committee"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "committee" ? "text-blue-600" : ""
-            }`}
-            onClick={toggleMenu}
-          >
-            Committee
-          </Link>
-          <Link
-            to="editorial-board"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "editorial-board" ? "text-blue-600" : ""
-            }`}
-            onClick={toggleMenu}
-          >
-            Editorial Board
-          </Link>
-          <Link
-            to="venue"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "venue" ? "text-blue-600" : ""
-            }`}
-            onClick={toggleMenu}
-          >
-            Venue
-          </Link>
-          <Link
-            to="contact"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-              activeSection === "contact" ? "text-blue-600" : ""
-            }`}
-            onClick={toggleMenu}
-          >
-            Contact
-          </Link>
+          {[
+            { to: "home", label: "Home" },
+            { to: "about", label: "About Us" },
+            { to: "committee", label: "Committee" },
+            { to: "editorial-board", label: "Editorial Board" },
+            { to: "call-for-papers", label: "Call for Papers" },
+            { to: "dates", label: "Important Dates" },
+            { to: "registration", label: "Registration" },
+            { to: "venue", label: "Venue" },
+            { to: "contact", label: "Contact" },
+          ].map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
+                activeSection === item.to ? "text-blue-600" : ""
+              }`}
+              onClick={toggleMenu}
+            >
+              {item.label}
+            </Link>
+          ))}
         </motion.div>
       )}
     </motion.nav>
