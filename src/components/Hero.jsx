@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import heroImage from "../assets/hero_img.webp"; // Ensure the correct path
+import heroImage from "../../public/assets/hero_img.webp"; // Ensure the correct path
 
 const Hero = () => {
   return (

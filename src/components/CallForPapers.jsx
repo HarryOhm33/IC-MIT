@@ -151,7 +151,7 @@ export default function CallForPapers() {
           {/* Download Template Button */}
           <div className="mt-6 text-center">
             <a
-              href="/src/assets/paper-template.docx"
+              href="/assets/paper-template.docx"
               download="ICMIT_Paper_Template.docx"
               className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition-all duration-300"
             >
