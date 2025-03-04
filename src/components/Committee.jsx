@@ -164,9 +164,9 @@ export default function Committee() {
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
-                Dr. Grzegorz Krolczyk
+                Dr. C. S. Rakurty
               </span>
-              ,<i> Professor</i>, Opole University of Technology, Poland
+              ,<i> Sr. Res. Engi-Manager</i>, The M. K. Morse Co., USA
             </li>
             <li>
               🔹{" "}
@@ -240,13 +240,6 @@ export default function Committee() {
               ,<i> Assistant Professor</i>, Universiti Malaysia Sarawak,
               Malaysia
             </li>
-            <li>
-              🔹{" "}
-              <span className="text-blue-600 font-semibold">
-                Miss. Avril Zhang
-              </span>
-              , Taiyuan University of Technology, China
-            </li>
           </ul>
         </motion.div>
 
@@ -318,20 +311,6 @@ export default function Committee() {
                   Dr. Karali Patra
                 </span>
                 ,<i> Professor</i>, IIT Patna
-              </li>
-              <li>
-                🔹{" "}
-                <span className="text-blue-600 font-semibold">
-                  Dr. Alok Kumar Das
-                </span>
-                ,<i> Professor</i>, IIT, ISM Dhanbad
-              </li>
-              <li>
-                🔹{" "}
-                <span className="text-blue-600 font-semibold">
-                  Dr. Prabir Kumar Saha
-                </span>
-                ,<i> Associate Professor</i>, IIT Patna
               </li>
               <li>
                 🔹{" "}
