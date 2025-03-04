@@ -23,7 +23,9 @@ const Hero = () => {
           className="text-4xl md:text-5xl font-bold leading-tight mb-4"
         >
           1st International Conference on Mechanical & Industrial Technologies
-          <span className="text-blue-600"> (IC-MIT 2025)</span>
+          <span className="text-blue-600">
+            <br /> (IC-MIT 2025)
+          </span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, x: -50 }}

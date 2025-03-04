@@ -49,15 +49,22 @@ export default function EditorialBoard() {
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">
-                Dr. Ashish Kumar Srivastava
+                Dr. T.S. Srivatsan
               </span>
-              ,<i> Associate Professor</i>, MIT Muzaffarpur
+              ,<i> Professor</i>, The Univ. of Akron, US
             </li>
             <li>
               🔹{" "}
               <span className="text-blue-600 font-semibold">Dr. Akash Nag</span>
               ,<i> Assistant Professor</i>, VŠB-Technical University of Ostrava,
               Czechia
+            </li>
+            <li>
+              🔹{" "}
+              <span className="text-blue-600 font-semibold">
+                Dr. C. S. Rakurty
+              </span>
+              ,<i> Sr. Res. Engi-Manager</i>, The M. K. Morse Co., USA
             </li>
             <li>
               🔹{" "}

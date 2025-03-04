@@ -29,7 +29,8 @@ export default function Committee() {
             <span className="text-blue-600 font-semibold">
               Dr. Pratima, I.A.S
             </span>{" "}
-            – Secretary, DSTTE
+            – <i> Secretary </i>, Department of Science, Technology and
+            Technical Education, Patna
           </p>
         </motion.div>
 
@@ -47,7 +48,8 @@ export default function Committee() {
             <span className="text-blue-600 font-semibold">
               Shri Ahmad Mahmood, I.A.S
             </span>{" "}
-            – Director, DSTTE
+            – <i>Director </i>, Department of Science, Technology and Technical
+            Education, Patna
           </p>
         </motion.div>
 
@@ -65,14 +67,14 @@ export default function Committee() {
             <span className="text-blue-600 font-semibold">
               Prof. (Dr.) M. K. Jha
             </span>{" "}
-            – Principal, MIT Muzaffarpur
+            –<i> Principal</i>, MIT Muzaffarpur
           </p>
           <p className="mt-2 text-gray-700">
             🎓{" "}
             <span className="text-blue-600 font-semibold">
               Prof. (Dr.) Sandeep Tiwari
             </span>{" "}
-            – Principle, DCE Darbhanga
+            –<i> Principal</i>, DCE Darbhanga
           </p>
         </motion.div>
 
