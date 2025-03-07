@@ -347,7 +347,7 @@ export default function Committee() {
                 <span className="text-blue-600 font-semibold">
                   Dr. Chandrakant Nirala
                 </span>
-                ,<i> Assistant Professor</i>, IIT Ropar
+                ,<i> Associate Professor</i>, IIT Ropar
               </li>
               <li>
                 🔹{" "}

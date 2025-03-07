@@ -77,6 +77,7 @@ export default function ContactFooter() {
             { to: "committee", label: "Committee" },
             { to: "editorial-board", label: "Editorial Board" },
             { to: "call-for-papers", label: "Call for Papers" },
+            { to: "publication", label: "Publication" },
             { to: "dates", label: "Important Dates" },
             { to: "registration", label: "Registration" },
             { to: "venue", label: "Venue" },

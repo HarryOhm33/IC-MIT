@@ -8,6 +8,7 @@ import Committee from "./components/Committee";
 import Venue from "./components/Venue";
 import ContactFooter from "./components/ContactFooter";
 import EditorialBoard from "./components/EditorialBoard";
+import Publication from "./components/Publication";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Committee />
       <EditorialBoard />
       <CallForPapers />
+      <Publication />
       <ImportantDates />
       <RegistrationFees />
       <Venue />

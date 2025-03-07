@@ -40,25 +40,28 @@ export default function Navbar() {
         "committee",
         "editorial-board",
         "call-for-papers",
+        "publication", // Added Publication section
         "dates",
         "registration",
         "venue",
         "contact",
       ];
 
-      let foundSection = "home";
+      let foundSection = "home"; // Default to home
 
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
+          // Check if the section is in the viewport (even if it's short)
+          if (rect.top <= 200 && rect.bottom >= 100) {
             foundSection = section;
             break;
           }
         }
       }
 
+      console.log("Active Section:", foundSection); // Debugging line
       setActiveSection(foundSection);
     };
 
@@ -97,6 +100,7 @@ export default function Navbar() {
             { to: "committee", label: "Committee" },
             { to: "editorial-board", label: "Editorial Board" },
             { to: "call-for-papers", label: "Call for Papers" },
+            { to: "publication", label: "Publication" }, // Added Publication link
             { to: "dates", label: "Important Dates" },
             { to: "registration", label: "Registration" },
             { to: "venue", label: "Venue" },
@@ -141,6 +145,7 @@ export default function Navbar() {
             { to: "committee", label: "Committee" },
             { to: "editorial-board", label: "Editorial Board" },
             { to: "call-for-papers", label: "Call for Papers" },
+            { to: "publication", label: "Publication" }, // Added Publication link
             { to: "dates", label: "Important Dates" },
             { to: "registration", label: "Registration" },
             { to: "venue", label: "Venue" },
