@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import heroImage from "../../public/assets/hero_img.webp"; // Ensure the correct path
-import Particles from "react-tsparticles";
 
 const Hero = () => {
-  const particlesInit = async (engine) => {
-    console.log("Particles Initialized!"); // Debugging
-    await engine.init(); // Initialize the engine
-  };
+  // Function to create particles
+  useEffect(() => {
+    const particleContainer = document.querySelector(".particle-container");
+
+    // Number of particles
+    const numParticles = 90; // Balanced number for aesthetics
+
+    for (let i = 0; i < numParticles; i++) {
+      const particle = document.createElement("div");
+      particle.classList.add("particle");
+
+      // Randomize particle size and position
+      const size = Math.random() * 8 + 4; // Size between 4px and 12px
+      const x = Math.random() * 100; // Random horizontal position
+      const y = Math.random() * 100; // Random vertical position
+      const duration = Math.random() * 20 + 10; // Animation duration between 10s and 30s
+
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${x}%`;
+      particle.style.top = `${y}%`;
+      particle.style.animationDuration = `${duration}s`;
+
+      particleContainer.appendChild(particle);
+    }
+  }, []);
 
   return (
     <section
@@ -16,48 +37,7 @@ const Hero = () => {
       style={{ scrollMarginTop: "80px" }} // Ensures smooth scrolling without overlap
     >
       {/* Particle Animation Background */}
-      <div className="absolute top-0 left-0 w-full h-full z-0">
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          options={{
-            fullScreen: { enable: false }, // Prevent it from taking the full screen
-            background: { color: "transparent" }, // Set background to transparent
-            fpsLimit: 60,
-            interactivity: {
-              events: {
-                onHover: { enable: true, mode: "repulse" },
-                resize: true,
-              },
-              modes: {
-                repulse: { distance: 100, duration: 0.4 },
-              },
-            },
-            particles: {
-              color: { value: "#3b82f6" }, // Blue particles
-              links: {
-                color: "#3b82f6", // Blue links
-                distance: 150,
-                enable: true,
-                opacity: 0.5,
-                width: 1,
-              },
-              move: {
-                enable: true,
-                speed: 2,
-              },
-              number: {
-                value: 80,
-                density: { enable: true, area: 800 },
-              },
-              opacity: { value: 0.5 },
-              shape: { type: "circle" },
-              size: { value: { min: 1, max: 3 } },
-            },
-            detectRetina: true,
-          }}
-        />
-      </div>
+      <div className="particle-container"></div>
 
       {/* Text Content */}
       <motion.div
