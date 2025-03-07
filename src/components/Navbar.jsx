@@ -4,13 +4,19 @@ import { FiMenu, FiX } from "react-icons/fi";
 import { Link } from "react-scroll";
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const mobileMenuRef = useRef(null); // Ref for the mobile menu
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  // Handle scroll to detect if the page is scrolled
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Close the mobile menu when clicking outside
   useEffect(() => {
@@ -61,7 +67,6 @@ export default function Navbar() {
         }
       }
 
-      console.log("Active Section:", foundSection); // Debugging line
       setActiveSection(foundSection);
     };
 
@@ -69,9 +74,15 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <motion.nav
-      className="fixed top-0 left-0 w-full bg-white shadow-md z-50"
+      className={`fixed top-0 left-0 w-full bg-white shadow-md z-50 transition-all ${
+        isScrolled ? "py-0" : "py-1"
+      }`}
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}

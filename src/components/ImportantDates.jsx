@@ -1,8 +1,18 @@
 import { motion } from "framer-motion";
 
-export default function ImportantDates() {
+const dates = [
+  { date: "April 15, 2025", event: "Abstract Submission Deadline" },
+  { date: "April 20, 2025", event: "Notification of Acceptance" },
+  { date: "April 30, 2025", event: "Early Bird Registration Deadline" },
+  { date: "May 24 - 26, 2025", event: "Conference Dates" },
+];
+
+const ImportantDates = () => {
   return (
-    <section id="dates" className="py-20 bg-white text-gray-900">
+    <section
+      id="dates"
+      className="py-20 bg-white from-gray-50 to-gray-100 text-gray-900" // Gradient for smooth blending
+    >
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Title */}
         <motion.h2
@@ -16,57 +26,39 @@ export default function ImportantDates() {
         </motion.h2>
 
         {/* Dates List */}
-        <motion.div
-          className="mt-8 bg-white p-6 rounded-2xl shadow-lg border border-gray-200"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+        <motion.ul
+          className="mt-8 space-y-4"
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            visible: { transition: { staggerChildren: 0.3 } },
+            hidden: {},
+          }}
           viewport={{ once: true }}
         >
-          <ul className="text-lg space-y-4 text-gray-700">
-            <li className="flex items-center gap-2">
-              <span className="text-blue-600">📌</span>
-              <span>
-                {" "}
-                <span className="text-blue-600 font-semibold">
-                  Abstract Submission Deadline:
-                </span>{" "}
-                April 15, 2025
-              </span>
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-blue-600">📌</span>
-              <span>
-                {" "}
-                <span className="text-blue-600 font-semibold">
-                  Notification of Acceptance:
-                </span>{" "}
-                April 20, 2025
-              </span>
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-blue-600">📌</span>
-              <span>
-                {" "}
-                <span className="text-blue-600 font-semibold">
-                  Early Bird Registration Deadline:
-                </span>{" "}
-                April 30, 2025
-              </span>
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-blue-600">📌</span>
-              <span>
-                {" "}
-                <span className="text-blue-600 font-semibold">
-                  Conference Dates:
-                </span>{" "}
-                May 24 - 26, 2025
-              </span>
-            </li>
-          </ul>
-        </motion.div>
+          {dates.map((item, index) => (
+            <motion.li
+              key={index}
+              className="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300" // Added hover effect
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="flex items-center gap-4">
+                <span className="text-blue-600 text-2xl">📌</span>
+                <div>
+                  <strong className="text-blue-600 font-semibold">
+                    {item.date}
+                  </strong>{" "}
+                  - {item.event}
+                </div>
+              </div>
+            </motion.li>
+          ))}
+        </motion.ul>
       </div>
     </section>
   );
-}
+};
+
+export default ImportantDates;
