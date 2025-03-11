@@ -34,7 +34,7 @@ export default function ContactFooter() {
           {/* Convener and Organizing Secretary in Card View */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             {/* Convener Card */}
-            <div className="bg-white p-6 rounded-lg shadow-md border border-blue-100">
+            <div className="p-6 rounded-lg shadow-sm border border-blue-100 bg-transparent">
               <h3 className="text-xl font-semibold text-blue-600">Convener</h3>
               <p className="mt-2 text-gray-700">
                 <strong>Dr. Ashish Kr. Srivastava</strong>
@@ -60,7 +60,7 @@ export default function ContactFooter() {
             </div>
 
             {/* Organizing Secretary Card */}
-            <div className="bg-white p-6 rounded-lg shadow-md border border-blue-100">
+            <div className="p-6 rounded-lg shadow-sm border border-blue-100 bg-transparent">
               <h3 className="text-xl font-semibold text-blue-600">
                 Organizing Secretary
               </h3>
@@ -88,23 +88,23 @@ export default function ContactFooter() {
                   +91 7250840578
                 </a>
               </p>
-              <p className="mt-1 flex items-center gap-2 text-gray-700">
-                <FaEnvelope className="text-blue-600" />
-                <a
-                  href="mailto:conference.me@mitmuzaffarpur.org"
-                  className="hover:text-blue-600 transition duration-300"
-                >
-                  conference.me@mitmuzaffarpur.org
-                </a>
-              </p>
             </div>
           </div>
 
-          {/* Location */}
-          <div className="mt-6">
-            <p className="mt-2 flex justify-center items-center gap-2 text-gray-700">
+          {/* Location and Email Side by Side in Desktop View */}
+          <div className="mt-6 flex flex-col md:flex-row justify-center items-center gap-4">
+            <p className="flex items-center gap-2 text-gray-700">
               <FaMapMarkerAlt className="text-blue-600" />
               MIT Muzaffarpur, Bihar, India
+            </p>
+            <p className="flex items-center gap-2 text-gray-700">
+              <FaEnvelope className="text-blue-600" />
+              <a
+                href="mailto:conference.me@mitmuzaffarpur.org"
+                className="hover:text-blue-600 transition duration-300"
+              >
+                conference.me@mitmuzaffarpur.org
+              </a>
             </p>
           </div>
         </motion.div>
