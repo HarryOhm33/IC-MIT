@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-scroll"; // Import React Scroll
+import { Link } from "react-scroll";
 import {
   FaEnvelope,
   FaMapMarkerAlt,
@@ -31,33 +31,82 @@ export default function ContactFooter() {
             For any queries, feel free to reach out:
           </p>
 
-          {/* Email */}
-          <p className="mt-2 flex justify-center items-center gap-2 text-gray-700">
-            <FaEnvelope className="text-blue-600" />
-            <a
-              href="mailto:conference.me@mitmuzaffarpur.org"
-              className="hover:text-blue-600 transition duration-300"
-            >
-              conference.me@mitmuzaffarpur.org
-            </a>
-          </p>
+          {/* Convener and Organizing Secretary in Card View */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            {/* Convener Card */}
+            <div className="bg-white p-6 rounded-lg shadow-md border border-blue-100">
+              <h3 className="text-xl font-semibold text-blue-600">Convener</h3>
+              <p className="mt-2 text-gray-700">
+                <strong>Dr. Ashish Kr. Srivastava</strong>
+              </p>
+              <p className="mt-1 flex items-center gap-2 text-gray-700">
+                <FaPhone className="text-blue-600" />
+                <a
+                  href="tel:+918707396833"
+                  className="hover:text-blue-600 transition duration-300"
+                >
+                  +91 8707396833
+                </a>
+              </p>
+              <p className="mt-1 flex items-center gap-2 text-gray-700">
+                <FaEnvelope className="text-blue-600" />
+                <a
+                  href="mailto:ashish.srivastava@mitmuzaffarpur.org"
+                  className="hover:text-blue-600 transition duration-300"
+                >
+                  ashish.srivastava@mitmuzaffarpur.org
+                </a>
+              </p>
+            </div>
 
-          {/* Phone */}
-          <p className="mt-2 flex justify-center items-center gap-2 text-gray-700">
-            <FaPhone className="text-blue-600" />
-            <a
-              href="tel:+919876543210"
-              className="hover:text-blue-600 transition duration-300"
-            >
-              +91 98765 43210
-            </a>
-          </p>
+            {/* Organizing Secretary Card */}
+            <div className="bg-white p-6 rounded-lg shadow-md border border-blue-100">
+              <h3 className="text-xl font-semibold text-blue-600">
+                Organizing Secretary
+              </h3>
+              <p className="mt-2 text-gray-700">
+                <strong>Dr. Alok Ranjan</strong>
+              </p>
+              <p className="mt-1 flex items-center gap-2 text-gray-700">
+                <FaPhone className="text-blue-600" />
+                <a
+                  href="tel:+916205661810"
+                  className="hover:text-blue-600 transition duration-300"
+                >
+                  +91 6205661810
+                </a>
+              </p>
+              <p className="mt-2 text-gray-700">
+                <strong>Prof. Ankit Kumar</strong>
+              </p>
+              <p className="mt-1 flex items-center gap-2 text-gray-700">
+                <FaPhone className="text-blue-600" />
+                <a
+                  href="tel:+917250840578"
+                  className="hover:text-blue-600 transition duration-300"
+                >
+                  +91 7250840578
+                </a>
+              </p>
+              <p className="mt-1 flex items-center gap-2 text-gray-700">
+                <FaEnvelope className="text-blue-600" />
+                <a
+                  href="mailto:conference.me@mitmuzaffarpur.org"
+                  className="hover:text-blue-600 transition duration-300"
+                >
+                  conference.me@mitmuzaffarpur.org
+                </a>
+              </p>
+            </div>
+          </div>
 
           {/* Location */}
-          <p className="mt-2 flex justify-center items-center gap-2 text-gray-700">
-            <FaMapMarkerAlt className="text-blue-600" />
-            MIT Muzaffarpur, Bihar, India
-          </p>
+          <div className="mt-6">
+            <p className="mt-2 flex justify-center items-center gap-2 text-gray-700">
+              <FaMapMarkerAlt className="text-blue-600" />
+              MIT Muzaffarpur, Bihar, India
+            </p>
+          </div>
         </motion.div>
 
         {/* Divider */}
