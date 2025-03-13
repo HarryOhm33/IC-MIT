@@ -11,14 +11,17 @@ function CallForPapersSummary() {
     <section
       id="call-for-papers"
       className="py-12 bg-gradient-to-b from-blue-50 to-white"
+      aria-labelledby="call-for-papers-heading"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Title */}
         <motion.h2
+          id="call-for-papers-heading"
           className="text-4xl font-extrabold text-blue-600 text-center"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
           Call for Papers
         </motion.h2>
@@ -27,8 +30,9 @@ function CallForPapersSummary() {
         <motion.p
           className="mt-4 text-lg text-gray-700 text-center max-w-2xl mx-auto leading-relaxed"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
           We invite researchers, academicians, and industry professionals to
           submit their original research papers for IC-MIT 2025. Explore the
@@ -61,8 +65,11 @@ function CallForPapersSummary() {
             <motion.article
               key={index}
               className="p-6 bg-white/80 backdrop-blur-lg rounded-lg shadow-lg border border-blue-100 hover:shadow-2xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut", delay: index * 0.2 }}
+              viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 150 }}
             >
               <div className="flex items-center space-x-4">
                 <div className="p-3 bg-blue-100 rounded-full">{track.icon}</div>
@@ -81,8 +88,9 @@ function CallForPapersSummary() {
         <motion.section
           className="mt-12 bg-white/80 backdrop-blur-lg p-8 rounded-lg shadow-xl border border-blue-100"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+          viewport={{ once: true }}
         >
           <h3 className="text-2xl font-semibold text-blue-600">
             Submission Guidelines
@@ -109,8 +117,9 @@ function CallForPapersSummary() {
         <motion.div
           className="mt-12 text-center"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
+          viewport={{ once: true }}
         >
           <Link
             to="/call-for-papers"

@@ -11,14 +11,17 @@ function CommitteeSummary() {
     <section
       id="committee"
       className="py-12 bg-gradient-to-b from-blue-50 to-white"
+      aria-labelledby="committee-heading"
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Title */}
         <motion.h2
+          id="committee-heading"
           className="text-4xl font-extrabold text-blue-700"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
           Committee
         </motion.h2>
@@ -27,8 +30,9 @@ function CommitteeSummary() {
         <motion.p
           className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
           Our conference is guided by an esteemed leadership team. Meet the key
           individuals driving IC-MIT 2025.
@@ -40,8 +44,11 @@ function CommitteeSummary() {
             <motion.div
               key={index}
               className="p-6 bg-white/90 backdrop-blur-lg rounded-xl shadow-md border border-blue-200 hover:shadow-lg transition-shadow"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut", delay: index * 0.2 }}
+              viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 120 }}
             >
               <div className="flex flex-col items-center text-center">
                 <div className="p-4 bg-blue-100 rounded-full">
@@ -64,13 +71,14 @@ function CommitteeSummary() {
         <motion.div
           className="mt-12"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+          viewport={{ once: true }}
         >
           <Link
             to="/committee"
             onClick={scrollToTop}
-            className="inline-flex items-center px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold text-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center px-8 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold text-lg shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             <span>View Full Committee</span>
             <svg

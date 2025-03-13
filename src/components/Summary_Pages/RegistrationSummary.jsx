@@ -11,14 +11,17 @@ function RegistrationSummary() {
     <section
       id="registration"
       className="py-16 bg-gradient-to-b from-blue-50 to-white"
+      aria-labelledby="registration-heading"
     >
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Title */}
         <motion.h2
+          id="registration-heading"
           className="text-4xl font-extrabold text-blue-700 text-center"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
           Registration
         </motion.h2>
@@ -27,8 +30,9 @@ function RegistrationSummary() {
         <motion.p
           className="mt-4 text-lg text-gray-700 text-center max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
           Register now to secure your spot at IC-MIT 2025. Early bird discounts
           are available for a limited time. Choose your category and complete
@@ -60,6 +64,10 @@ function RegistrationSummary() {
             <motion.div
               key={index}
               className="p-6 bg-white/90 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut", delay: index * 0.2 }}
+              viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
             >
               <div className="flex items-center space-x-4">
@@ -81,8 +89,9 @@ function RegistrationSummary() {
         <motion.p
           className="mt-8 text-gray-700 text-center text-lg"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
           *Above is partial information. For full details, including payment
           info and registration, click below.*
@@ -92,8 +101,9 @@ function RegistrationSummary() {
         <motion.div
           className="mt-6 text-center"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
+          viewport={{ once: true }}
         >
           <Link
             to="/registration"
