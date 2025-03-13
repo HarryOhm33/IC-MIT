@@ -11,51 +11,44 @@ const ImportantDates = () => {
   return (
     <section
       id="dates"
-      className="py-20 bg-white from-gray-50 to-gray-100 text-gray-900" // Gradient for smooth blending
+      className="py-12 bg-gradient-to-b from-blue-50 to-white"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6">
         {/* Section Title */}
         <motion.h2
-          className="text-4xl font-bold text-blue-600 text-center"
-          initial={{ opacity: 0, y: -50 }}
+          className="text-4xl font-extrabold text-blue-600 text-center"
+          initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           📅 Important Dates
         </motion.h2>
 
-        {/* Dates List */}
-        <motion.ul
-          className="mt-8 space-y-4"
-          initial="hidden"
-          whileInView="visible"
-          variants={{
-            visible: { transition: { staggerChildren: 0.3 } },
-            hidden: {},
-          }}
-          viewport={{ once: true }}
-        >
+        {/* Timeline */}
+        <div className="mt-12 border-l-4 border-blue-600 pl-6 space-y-8">
           {dates.map((item, index) => (
-            <motion.li
+            <motion.div
               key={index}
-              className="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300" // Added hover effect
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              className="relative p-5 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: index * 0.1,
+              }}
+              viewport={{ once: true }}
             >
-              <div className="flex items-center gap-4">
-                <span className="text-blue-600 text-2xl">📌</span>
-                <div>
-                  <strong className="text-blue-600 font-semibold">
-                    {item.date}
-                  </strong>{" "}
-                  - {item.event}
-                </div>
-              </div>
-            </motion.li>
+              {/* Timeline Dot */}
+              <span className="absolute -left-7 top-1/2 transform -translate-y-1/2 w-5 h-5 bg-blue-600 border-4 border-white rounded-full"></span>
+
+              {/* Date & Event */}
+              <p className="text-lg font-semibold text-blue-700">{item.date}</p>
+              <p className="text-gray-700">{item.event}</p>
+            </motion.div>
           ))}
-        </motion.ul>
+        </div>
       </div>
     </section>
   );

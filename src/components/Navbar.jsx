@@ -1,13 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
-import { Link } from "react-scroll";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const mobileMenuRef = useRef(null); // Ref for the mobile menu
+  const location = useLocation(); // Get current route
+  const navigate = useNavigate(); // For programmatic navigation
 
   // Handle scroll to detect if the page is scrolled
   useEffect(() => {
@@ -46,7 +48,7 @@ export default function Navbar() {
         "committee",
         "editorial-board",
         "call-for-papers",
-        "publication", // Added Publication section
+        "publication",
         "dates",
         "registration",
         "venue",
@@ -78,6 +80,37 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  // Handle navigation and scrolling
+  const handleNavigation = (to) => {
+    const navbar = document.querySelector("nav"); // Select the navbar
+    const navbarHeight = navbar ? navbar.offsetHeight : 70; // Get navbar height dynamically
+
+    // Determine the offset based on screen width
+    const isMobile = window.innerWidth <= 768; // Adjust breakpoint as needed
+    const offset = isMobile ? -navbarHeight + 420 : -navbarHeight;
+
+    if (location.pathname !== "/") {
+      navigate("/", { replace: true });
+
+      setTimeout(() => {
+        const target = document.getElementById(to);
+        if (target) {
+          const y =
+            target.getBoundingClientRect().top + window.scrollY + offset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const target = document.getElementById(to);
+      if (target) {
+        const y = target.getBoundingClientRect().top + window.scrollY + offset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+
+    if (isOpen) setIsOpen(false);
+  };
+
   return (
     <motion.nav
       className={`fixed top-0 left-0 w-full bg-white shadow-md z-50 transition-all ${
@@ -88,19 +121,12 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+        {/* Logo */}
         <h1
           className="text-blue-600 text-2xl font-bold cursor-pointer"
-          onClick={() => setActiveSection("home")}
+          onClick={() => handleNavigation("home")}
         >
-          <Link
-            to="home"
-            smooth={true}
-            duration={500}
-            offset={-80}
-            className="cursor-pointer"
-          >
-            IC-MIT 2025
-          </Link>
+          IC-MIT 2025
         </h1>
 
         {/* Desktop Menu */}
@@ -111,24 +137,21 @@ export default function Navbar() {
             { to: "committee", label: "Committee" },
             { to: "editorial-board", label: "Editorial Board" },
             { to: "call-for-papers", label: "Call for Papers" },
-            { to: "publication", label: "Publication" }, // Added Publication link
+            { to: "publication", label: "Publication" },
             { to: "dates", label: "Important Dates" },
             { to: "registration", label: "Registration" },
             { to: "venue", label: "Venue" },
             { to: "contact", label: "Contact" },
           ].map((item) => (
-            <Link
+            <div
               key={item.to}
-              to={item.to}
-              smooth={true}
-              duration={500}
-              offset={-80}
               className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
                 activeSection === item.to ? "text-blue-600" : ""
               }`}
+              onClick={() => handleNavigation(item.to)}
             >
               {item.label}
-            </Link>
+            </div>
           ))}
         </div>
 
@@ -156,25 +179,21 @@ export default function Navbar() {
             { to: "committee", label: "Committee" },
             { to: "editorial-board", label: "Editorial Board" },
             { to: "call-for-papers", label: "Call for Papers" },
-            { to: "publication", label: "Publication" }, // Added Publication link
+            { to: "publication", label: "Publication" },
             { to: "dates", label: "Important Dates" },
             { to: "registration", label: "Registration" },
             { to: "venue", label: "Venue" },
             { to: "contact", label: "Contact" },
           ].map((item) => (
-            <Link
+            <div
               key={item.to}
-              to={item.to}
-              smooth={true}
-              duration={500}
-              offset={-80}
               className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
                 activeSection === item.to ? "text-blue-600" : ""
               }`}
-              onClick={toggleMenu}
+              onClick={() => handleNavigation(item.to)}
             >
               {item.label}
-            </Link>
+            </div>
           ))}
         </motion.div>
       )}

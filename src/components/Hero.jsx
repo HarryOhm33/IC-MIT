@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen text-gray-900 px-6 md:px-12 pt-32 lg:pt-16"
+      className="relative flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen text-gray-900 px-6 md:px-12 pt-32 lg:pt-16 py-5"
       style={{
         scrollMarginTop: "80px",
         backgroundImage: "url('/assets/mit.png')", // Correct way to use public folder images
