@@ -4,7 +4,7 @@ const dates = [
   { date: "April 15, 2025", event: "Abstract Submission Deadline" },
   { date: "April 20, 2025", event: "Notification of Acceptance" },
   { date: "April 30, 2025", event: "Early Bird Registration Deadline" },
-  { date: "May 24 - 26, 2025", event: "Conference Dates" },
+  { date: "May 24 - 25, 2025", event: "Conference Dates" },
 ];
 
 const ImportantDates = () => {
