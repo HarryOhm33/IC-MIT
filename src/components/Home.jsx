@@ -5,7 +5,7 @@ import ImportantDates from "./ImportantDates"; // Important Dates
 import RegistrationSummary from "./Summary_Pages/RegistrationSummary"; // Summarized Registration
 import CommitteeSummary from "./Summary_Pages/CommitteeSummary"; // Summarized Committee
 import EditorialBoard from "./EditorialBoard"; // Editorial board
-import Publication from "./Publication"; // Publication Section
+import Publication from "./Summary_Pages/PublicationSummary"; // Publication Section
 
 function Home() {
   return (
@@ -33,7 +33,7 @@ function Home() {
         <CallForPapersSummary />
       </section>
 
-      {/* Publication Section */}
+      {/* Publication Summary Section */}
       <section id="publication" className="bg-blue-50 scroll-section">
         <Publication />
       </section>

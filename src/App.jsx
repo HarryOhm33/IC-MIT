@@ -9,6 +9,7 @@ import Committee from "./components/Committee";
 import Venue from "./components/Venue";
 import ContactFooter from "./components/ContactFooter";
 import Error404 from "./components/Error404"; // Import the 404 Error Page
+import Publication from "./components/Publication";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/registration" element={<RegistrationFees />} />
             <Route path="/committee" element={<Committee />} />
             <Route path="/venue" element={<Venue />} />
+            <Route path="/publications" element={<Publication />} />
 
             {/* Catch-all route for 404 */}
             <Route path="*" element={<Error404 />} />
