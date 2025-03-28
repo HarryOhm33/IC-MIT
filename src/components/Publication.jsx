@@ -20,7 +20,7 @@ export default function Publication() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          📚 Publication Partners
+          📚 Publication
         </motion.h2>
 
         <motion.div
