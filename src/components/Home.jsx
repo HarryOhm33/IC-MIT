@@ -9,6 +9,7 @@ import Publication from "./Summary_Pages/PublicationSummary"; // Publication Sec
 import InternationalAdvisoryBoard from "./IAB";
 import NationalAdvisoryBoard from "./NAB";
 import Venue from "./Venue";
+import KeynoteSpeaker from "./KeynoteSpeakers";
 
 function Home() {
   return (
@@ -32,6 +33,10 @@ function Home() {
 
       <section id="nab" className="bg-blue-50 scroll-section">
         <NationalAdvisoryBoard />
+      </section>
+
+      <section id="keynote" className="bg-blue-50 scroll-section">
+        <KeynoteSpeaker />
       </section>
 
       {/* Editorial Board Section */}
