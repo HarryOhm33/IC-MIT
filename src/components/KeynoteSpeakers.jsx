@@ -2,7 +2,10 @@ import { motion } from "framer-motion";
 
 export default function KeynoteSpeaker() {
   return (
-    <section id="keynote" className="py-20 bg-white text-gray-900">
+    <section
+      id="keynote"
+      className="py-12 bg-gradient-to-b from-blue-50 to-white"
+    >
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Title */}
         <motion.h2
