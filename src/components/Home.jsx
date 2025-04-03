@@ -6,6 +6,9 @@ import RegistrationSummary from "./Summary_Pages/RegistrationSummary"; // Summar
 import CommitteeSummary from "./Summary_Pages/CommitteeSummary"; // Summarized Committee
 import EditorialBoard from "./EditorialBoard"; // Editorial board
 import Publication from "./Summary_Pages/PublicationSummary"; // Publication Section
+import InternationalAdvisoryBoard from "./IAB";
+import NationalAdvisoryBoard from "./NAB";
+import Venue from "./Venue";
 
 function Home() {
   return (
@@ -21,6 +24,14 @@ function Home() {
       {/* Committee Summary Section */}
       <section id="committee" className="bg-blue-50 scroll-section">
         <CommitteeSummary />
+      </section>
+
+      <section id="iab" className="bg-blue-50 scroll-section">
+        <InternationalAdvisoryBoard />
+      </section>
+
+      <section id="nab" className="bg-blue-50 scroll-section">
+        <NationalAdvisoryBoard />
       </section>
 
       {/* Editorial Board Section */}
@@ -46,6 +57,10 @@ function Home() {
       {/* Registration Summary Section */}
       <section id="registration" className="bg-white scroll-section">
         <RegistrationSummary />
+      </section>
+
+      <section id="venue" className="bg-white scroll-section">
+        <Venue />
       </section>
     </div>
   );

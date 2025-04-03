@@ -32,7 +32,7 @@ export default function About() {
             transition={{ duration: 1, delay: 0.4 }}
           >
             The 1st International Conference on Mechanical & Industrial
-            Technologies (IC-MIT 2025) is going to be held in the Department of
+            Technologies (ICMIT - 2025) is going to be held in the Department of
             Mechanical Engineering, MIT Muzaffarpur, Bihar India during May
             24-25, 2025. The conference will offer an international forum for
             researchers, academics, scientists, professional technologists, and

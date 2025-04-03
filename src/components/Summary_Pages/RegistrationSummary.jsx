@@ -34,7 +34,7 @@ function RegistrationSummary() {
           transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Register now to secure your spot at IC-MIT 2025. Early bird discounts
+          Register now to secure your spot at ICMIT - 2025. Early bird discounts
           are available for a limited time. Choose your category and complete
           the registration process.
         </motion.p>

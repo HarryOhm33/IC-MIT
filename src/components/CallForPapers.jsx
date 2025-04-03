@@ -149,6 +149,10 @@ export default function CallForPapers() {
             <p className="font-semibold text-lg mt-2">
               📢 <strong>Notification of Acceptance:</strong> April 20, 2025
             </p>
+            <p className="font-semibold text-lg mt-2">
+              📄 <strong>Date for Full-Length Paper Submission:</strong> May 15,
+              2025
+            </p>
           </div>
 
           {/* Download Template Button */}

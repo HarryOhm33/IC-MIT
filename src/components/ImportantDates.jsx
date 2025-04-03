@@ -4,6 +4,7 @@ const dates = [
   { date: "April 15, 2025", event: "Abstract Submission Deadline" },
   { date: "April 20, 2025", event: "Notification of Acceptance" },
   { date: "April 30, 2025", event: "Early Bird Registration Deadline" },
+  { date: "May 15, 2025", event: "Date for Full-Length Paper Submission" },
   { date: "May 24 - 25, 2025", event: "Conference Dates" },
 ];
 
@@ -49,6 +50,17 @@ const ImportantDates = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Starting Remark Below Timeline */}
+        <motion.p
+          className="mt-8 text-center text-gray-600 italic"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          * Upon acceptance of Abstract, Registration may be done
+        </motion.p>
       </div>
     </section>
   );

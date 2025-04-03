@@ -35,9 +35,9 @@ function AboutSummary() {
           viewport={{ once: true }}
         >
           The 1st International Conference on Mechanical & Industrial
-          Technologies (IC-MIT 2025) is a premier event organized by Muzaffarpur
-          Institute of Technology, Darbhanga College of Engineering, and the
-          Indian Society for Technical Education.
+          Technologies (ICMIT - 2025) is a premier event organized by
+          Muzaffarpur Institute of Technology, Darbhanga College of Engineering,
+          and the Indian Society for Technical Education.
         </motion.p>
 
         {/* Card Wrapper */}

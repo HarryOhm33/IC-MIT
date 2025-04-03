@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen text-gray-900 px-6 md:px-12 pt-32 lg:pt-16 py-5"
+      className="relative flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen text-gray-900 px-6 pt-32 lg:pt-16 py-5" //removed md:px-12
       style={{
         scrollMarginTop: "80px",
         backgroundImage: "url('/assets/mit.png')", // Correct way to use public folder images
@@ -33,7 +33,7 @@ const Hero = () => {
         >
           1st International Conference on Mechanical & Industrial Technologies
           <span className="text-yellow-300">
-            <br /> (IC-MIT 2025)
+            <br /> (ICMIT - 2025)
           </span>
         </motion.h1>
         <motion.p
@@ -63,7 +63,7 @@ const Hero = () => {
       </motion.div>
 
       {/* Image (Conference Banner) */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -77,7 +77,7 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         />
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };

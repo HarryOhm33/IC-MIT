@@ -35,7 +35,7 @@ function CommitteeSummary() {
           viewport={{ once: true }}
         >
           Our conference is guided by an esteemed leadership team. Meet the key
-          individuals driving IC-MIT 2025.
+          individuals driving ICMIT - 2025.
         </motion.p>
 
         {/* Card Wrapper */}

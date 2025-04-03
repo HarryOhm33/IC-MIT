@@ -35,7 +35,7 @@ function CallForPapersSummary() {
           viewport={{ once: true }}
         >
           We invite researchers, academicians, and industry professionals to
-          submit their original research papers for IC-MIT 2025. Explore the
+          submit their original research papers for ICMIT - 2025. Explore the
           tracks and contribute to the advancement of mechanical and industrial
           technologies.
         </motion.p>
@@ -109,6 +109,10 @@ function CallForPapersSummary() {
             </li>
             <li>
               <strong>Early Bird Registration Deadline:</strong> April 30, 2025
+            </li>
+            <li>
+              <strong>Date for full length paper submission:</strong> May 15,
+              2025
             </li>
           </ul>
         </motion.section>

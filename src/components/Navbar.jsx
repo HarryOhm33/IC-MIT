@@ -1,74 +1,64 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX, FiChevronRight } from "react-icons/fi";
 import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const mobileMenuRef = useRef(null); // Ref for the mobile menu
-  const location = useLocation(); // Get current route
-  const navigate = useNavigate(); // For programmatic navigation
+  const mobileMenuRef = useRef(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  // Handle scroll to detect if the page is scrolled
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close the mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
         mobileMenuRef.current &&
-        !mobileMenuRef.current.contains(event.target) &&
-        isOpen
+        !mobileMenuRef.current.contains(event.target)
       ) {
-        setIsOpen(false); // Close the menu
+        setIsOpen(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
 
-  // Highlight active section on scroll
   useEffect(() => {
+    const sections = [
+      "home",
+      "about",
+      "committee",
+      "iab",
+      "nab",
+      "keynote",
+      "editorial-board",
+      "call-for-papers",
+      "publication",
+      "dates",
+      "registration",
+      "venue",
+      "contact",
+    ];
+
     const handleScroll = () => {
-      const sections = [
-        "home",
-        "about",
-        "committee",
-        "editorial-board",
-        "call-for-papers",
-        "publication",
-        "dates",
-        "registration",
-        "venue",
-        "contact",
-      ];
-
-      let foundSection = "home"; // Default to home
-
+      let foundSection = "home";
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          // Check if the section is in the viewport (even if it's short)
           if (rect.top <= 200 && rect.bottom >= 100) {
             foundSection = section;
             break;
           }
         }
       }
-
       setActiveSection(foundSection);
     };
 
@@ -76,39 +66,26 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  // Handle navigation and scrolling
   const handleNavigation = (to) => {
-    const navbar = document.querySelector("nav"); // Select the navbar
-    const navbarHeight = navbar ? navbar.offsetHeight : 70; // Get navbar height dynamically
-
-    // Determine the offset based on screen width
-    const isMobile = window.innerWidth <= 768; // Adjust breakpoint as needed
-    const offset = isMobile ? -navbarHeight + 420 : -navbarHeight;
+    const navbar = document.querySelector("nav");
+    const navbarHeight = navbar?.offsetHeight || 70;
+    const offset = -navbarHeight + 50; // Adjusted offset for all screen sizes
 
     if (location.pathname !== "/") {
       navigate("/", { replace: true });
-
-      setTimeout(() => {
-        const target = document.getElementById(to);
-        if (target) {
-          const y =
-            target.getBoundingClientRect().top + window.scrollY + offset;
-          window.scrollTo({ top: y, behavior: "smooth" });
-        }
-      }, 100);
+      setTimeout(() => scrollToSection(to, offset), 100);
     } else {
-      const target = document.getElementById(to);
-      if (target) {
-        const y = target.getBoundingClientRect().top + window.scrollY + offset;
-        window.scrollTo({ top: y, behavior: "smooth" });
-      }
+      scrollToSection(to, offset);
     }
+    setIsOpen(false);
+  };
 
-    if (isOpen) setIsOpen(false);
+  const scrollToSection = (to, offset) => {
+    const target = document.getElementById(to);
+    if (target) {
+      const y = target.getBoundingClientRect().top + window.scrollY + offset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
 
   return (
@@ -120,81 +97,73 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
-        {/* Logo */}
-        <h1
-          className="text-blue-600 text-2xl font-bold cursor-pointer"
-          onClick={() => handleNavigation("home")}
-        >
-          IC-MIT 2025
-        </h1>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <h1
+            className="text-blue-600 text-2xl font-bold cursor-pointer hover:text-blue-700 transition-colors"
+            onClick={() => handleNavigation("home")}
+          >
+            ICMIT - 2025
+          </h1>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6 text-gray-900">
-          {[
-            { to: "home", label: "Home" },
-            { to: "about", label: "About Us" },
-            { to: "committee", label: "Committee" },
-            { to: "editorial-board", label: "Editorial Board" },
-            { to: "call-for-papers", label: "Call for Papers" },
-            { to: "publication", label: "Publication" },
-            { to: "dates", label: "Important Dates" },
-            { to: "registration", label: "Registration" },
-            { to: "venue", label: "Venue" },
-            { to: "contact", label: "Contact" },
-          ].map((item) => (
-            <div
-              key={item.to}
-              className={`hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-                activeSection === item.to ? "text-blue-600" : ""
-              }`}
-              onClick={() => handleNavigation(item.to)}
-            >
-              {item.label}
-            </div>
-          ))}
+          {/* Hamburger Menu Button (Always visible) */}
+          <button
+            className="p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? (
+              <FiX className="w-6 h-6" />
+            ) : (
+              <FiMenu className="w-6 h-6" />
+            )}
+          </button>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-gray-900 hover:text-blue-600 transition-colors duration-300 cursor-pointer"
-          onClick={toggleMenu}
-        >
-          {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
-        </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile-style Menu (Now used for all screen sizes) */}
       {isOpen && (
         <motion.div
           ref={mobileMenuRef}
-          className="md:hidden bg-white p-4 space-y-4 text-center text-gray-900 shadow-lg border-t border-gray-200"
-          initial={{ opacity: 0, y: -20 }}
+          className="absolute w-full bg-white border-t border-gray-100 shadow-xl"
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
         >
-          {[
-            { to: "home", label: "Home" },
-            { to: "about", label: "About Us" },
-            { to: "committee", label: "Committee" },
-            { to: "editorial-board", label: "Editorial Board" },
-            { to: "call-for-papers", label: "Call for Papers" },
-            { to: "publication", label: "Publication" },
-            { to: "dates", label: "Important Dates" },
-            { to: "registration", label: "Registration" },
-            { to: "venue", label: "Venue" },
-            { to: "contact", label: "Contact" },
-          ].map((item) => (
-            <div
-              key={item.to}
-              className={`block hover:text-blue-600 transition-colors duration-300 cursor-pointer ${
-                activeSection === item.to ? "text-blue-600" : ""
-              }`}
-              onClick={() => handleNavigation(item.to)}
-            >
-              {item.label}
-            </div>
-          ))}
+          <div className="px-4 py-3 space-y-1 max-h-[70vh] overflow-y-auto">
+            {[
+              { to: "home", label: "Home" },
+              { to: "about", label: "About Us" },
+              { to: "committee", label: "Committee" },
+              { to: "iab", label: "International Advisory Board" },
+              { to: "nab", label: "National Advisory Board" },
+              { to: "keynote", label: "Keynote Speakers" },
+              { to: "editorial-board", label: "Editorial Board" },
+              { to: "call-for-papers", label: "Call for Papers" },
+              { to: "publication", label: "Publication" },
+              { to: "dates", label: "Important Dates" },
+              { to: "registration", label: "Registration" },
+              { to: "venue", label: "Venue" },
+              { to: "contact", label: "Contact" },
+            ].map((item) => (
+              <button
+                key={item.to}
+                onClick={() => handleNavigation(item.to)}
+                className={`
+    w-full px-4 py-3 rounded-lg
+    transition-all duration-200
+    text-center
+    ${
+      activeSection === item.to
+        ? "text-blue-600 font-semibold" // Removed background and border
+        : "text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:border-l-4 hover:border-blue-200"
+    }
+  `}
+              >
+                <span className="block">{item.label}</span>
+              </button>
+            ))}
+          </div>
         </motion.div>
       )}
     </motion.nav>
