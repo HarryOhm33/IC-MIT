@@ -153,6 +153,15 @@ export default function CallForPapers() {
               📄 <strong>Date for Full-Length Paper Submission:</strong> May 15,
               2025
             </p>
+            <p className="font-semibold text-lg mt-2">
+              ✉️ <strong>Mode of Submission of Abstract:</strong>{" "}
+              <a
+                href="mailto:conference.me@mitmuzaffarpur.org"
+                className="underline hover:text-blue-900"
+              >
+                conference.me@mitmuzaffarpur.org
+              </a>
+            </p>
           </div>
 
           {/* Download Template Button */}

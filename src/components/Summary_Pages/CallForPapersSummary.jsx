@@ -114,6 +114,15 @@ function CallForPapersSummary() {
               <strong>Date for full length paper submission:</strong> May 15,
               2025
             </li>
+            <li>
+              <strong>Mode of submission of abstract:</strong> Mail to{" "}
+              <a
+                href="mailto:conference.me@mitmuzaffarpur.org"
+                className="text-blue-600 underline hover:text-blue-700"
+              >
+                conference.me@mitmuzaffarpur.org
+              </a>
+            </li>
           </ul>
         </motion.section>
 
