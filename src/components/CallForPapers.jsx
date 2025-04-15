@@ -136,15 +136,23 @@ export default function CallForPapers() {
 
           <p className="mt-3 text-gray-700">
             Authors must submit their research papers in{" "}
-            <strong>PDF format</strong> via the online submission portal. All
-            submissions will undergo a <strong>double-blind peer review</strong>{" "}
-            process.
+            <strong>PDF format</strong> via email to{" "}
+            <a
+              href="mailto:conference.me@mitmuzaffarpur.org?subject=Research Paper Submission"
+              className="text-blue-600 hover:text-blue-800 underline font-medium transition-colors duration-200"
+              title="Submit research paper"
+            >
+              conference.me@mitmuzaffarpur.org
+            </a>
+            . All submissions will undergo a{" "}
+            <strong>double-blind peer review</strong> process.
           </p>
 
           {/* Deadline Box */}
           <div className="mt-4 p-4 bg-blue-100 rounded-lg border border-blue-200 text-blue-800 text-center shadow-md">
             <p className="font-semibold text-lg">
-              📅 <strong>Submission Deadline:</strong> April 15, 2025
+              📅 <strong>Extended Deadline for Submission:</strong> April 20,
+              2025
             </p>
             <p className="font-semibold text-lg mt-2">
               📢 <strong>Notification of Acceptance:</strong> April 20, 2025

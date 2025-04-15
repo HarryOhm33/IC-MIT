@@ -96,13 +96,21 @@ function CallForPapersSummary() {
             Submission Guidelines
           </h3>
           <p className="mt-4 text-gray-700 leading-relaxed">
-            Authors are invited to submit their original research papers in PDF
-            format via the online submission portal. All submissions will
-            undergo a double-blind peer review process.
+            Authors are invited to submit their original research papers in{" "}
+            <strong>PDF format</strong> by email to{" "}
+            <a
+              href="mailto:conference.me@mitmuzaffarpur.org"
+              className="text-blue-600 hover:text-blue-800 underline transition-colors"
+              title="Send your submission"
+            >
+              conference.me@mitmuzaffarpur.org
+            </a>
+            . All submissions will undergo a{" "}
+            <strong>double-blind peer review</strong> process.
           </p>
           <ul className="mt-4 text-gray-700 list-disc list-inside space-y-2">
             <li>
-              <strong>Submission Deadline:</strong> April 15, 2025
+              <strong>Extended Deadline for Submission:</strong> April 20, 2025
             </li>
             <li>
               <strong>Notification of Acceptance:</strong> April 20, 2025

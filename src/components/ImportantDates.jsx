@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 
 const dates = [
-  { date: "April 15, 2025", event: "Abstract Submission Deadline" },
+  {
+    date: "April 20, 2025",
+    event: "Extended Deadline for Abstract Submission",
+  },
   { date: "April 20, 2025", event: "Notification of Acceptance" },
   { date: "April 30, 2025", event: "Early Bird Registration Deadline" },
   { date: "May 15, 2025", event: "Date for Full-Length Paper Submission" },
