@@ -10,6 +10,7 @@ import Venue from "./components/Venue";
 import ContactFooter from "./components/ContactFooter";
 import Error404 from "./components/Error404"; // Import the 404 Error Page
 import Publication from "./components/Publication";
+import ScrollingNotificationBar from "./components/ScrollingNotificationBar";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <AnimatePresence mode="wait">
         <div className="bg-gray-50">
           <Navbar />
+          {/* <ScrollingNotificationBar /> */}
           <Routes>
             {/* Homepage */}
             <Route path="/" element={<Home />} />

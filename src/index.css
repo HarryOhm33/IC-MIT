@@ -11,3 +11,19 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 3)); /* Divide by number of duplicates */
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 20s linear infinite;
+  display: inline-block;
+  will-change: transform;
+  padding-right: 100%; /* Creates overlap for seamless transition */
+}
