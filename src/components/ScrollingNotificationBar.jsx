@@ -1,6 +1,6 @@
 export default function ScrollingNotificationBar() {
   const notifications = [
-    "🚨 Abstract Submission Deadline Extended to April 20, 2025 (was April 15, 2025)",
+    "🚨 Abstract Submission Deadline Extended to April 20, 2025",
     "📩 Submit your abstract to: conference.me@mitmuzaffarpur.org",
   ];
 
