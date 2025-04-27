@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import keynoteSpeakersImage from "../../public/assets/keynote-speakers.jpg";
 
 export default function KeynoteSpeaker() {
   return (
@@ -28,7 +29,7 @@ export default function KeynoteSpeaker() {
         >
           <div className="flex justify-center">
             <img
-              src="/assets/keynote-speakers.jpg"
+              src={keynoteSpeakersImage}
               alt="Keynote Speakers List"
               className="rounded-lg w-full max-w-3xl"
             />
