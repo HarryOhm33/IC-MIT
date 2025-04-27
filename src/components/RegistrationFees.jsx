@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function RegistrationFees() {
   return (
-    <section id="registration" className="py-20 bg-white text-gray-900">
+    <section id="registration" className="py-28 bg-white text-gray-900">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Title */}
         <motion.h2

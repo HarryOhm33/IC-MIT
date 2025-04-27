@@ -8,7 +8,7 @@ export default function Publication() {
   return (
     <section
       id="publication"
-      className="py-20 bg-white text-gray-900"
+      className="py-28 bg-white text-gray-900"
       aria-labelledby="publication-heading"
     >
       <div className="max-w-6xl mx-auto px-6">

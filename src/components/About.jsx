@@ -7,7 +7,7 @@ export default function About() {
   const [mechExpanded, setMechExpanded] = useState(false);
 
   return (
-    <section id="about" className="py-20 bg-white text-gray-900">
+    <section id="about" className="py-28 bg-white text-gray-900">
       <div className="max-w-6xl mx-auto px-6">
         {/* About Conference */}
         <motion.div

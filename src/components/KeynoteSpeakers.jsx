@@ -15,7 +15,7 @@ export default function KeynoteSpeaker() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          🎤 Keynote Speaker
+          🎤 Keynote Speakers
         </motion.h2>
 
         {/* Keynote Speaker Details */}
@@ -26,10 +26,13 @@ export default function KeynoteSpeaker() {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-semibold text-blue-600">
-            Keynote Speaker
-          </h3>
-          <p className="mt-2 text-gray-700">Will be updated shortly.</p>
+          <div className="flex justify-center">
+            <img
+              src="/assets/keynote-speakers.jpg"
+              alt="Keynote Speakers List"
+              className="rounded-lg w-full max-w-3xl"
+            />
+          </div>
         </motion.div>
       </div>
     </section>
