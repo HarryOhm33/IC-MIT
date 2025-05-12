@@ -173,13 +173,24 @@ export default function CallForPapers() {
           </div>
 
           {/* Download Template Button */}
-          <div className="mt-6 text-center">
+          <div className="mt-6 text-center space-y-4 md:space-y-0 md:space-x-4">
+            {/* Download Paper Template Button */}
             <a
               href="/assets/paper-template.docx"
               download="ICMIT_Paper_Template.docx"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition-all duration-300"
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
             >
               📥 Download Paper Template
+            </a>
+
+            {/* Submit Full Length Paper Button */}
+            <a
+              href="https://docs.google.com/forms/d/1rcu_GjITlquEiykubrkYsVpfCZsNAk-KJyF4ENGWz-U/edit?chromeless=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-green-700 transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
+            >
+              📄 Submit Full Length Paper
             </a>
           </div>
         </motion.div>

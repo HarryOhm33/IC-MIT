@@ -136,12 +136,13 @@ function CallForPapersSummary() {
 
         {/* View Full Call for Papers Button */}
         <motion.div
-          className="mt-12 text-center"
+          className="mt-12 text-center space-x-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
           viewport={{ once: true }}
         >
+          {/* Original "Explore More" button */}
           <Link
             to="/call-for-papers"
             onClick={scrollToTop}
@@ -164,6 +165,33 @@ function CallForPapersSummary() {
               />
             </svg>
           </Link>
+
+          {/* New "Submit Full Length Paper" button */}
+          <a
+            href="https://docs.google.com/forms/d/1rcu_GjITlquEiykubrkYsVpfCZsNAk-KJyF4ENGWz-U/edit?chromeless=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+            aria-label="Submit Full Length Paper"
+          >
+            <span className="text-lg font-semibold">
+              Submit Full Length Paper
+            </span>
+            <svg
+              className="w-5 h-5 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </a>
         </motion.div>
       </div>
     </section>
