@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import heroImage from "../../public/assets/hero_img.webp";
 
 const Hero = () => {
   // Function to handle PDF download
@@ -17,7 +16,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen text-gray-900 px-6 md:px-12 pt-32 lg:pt-16"
+      className="relative flex flex-col items-center justify-center min-h-screen text-gray-900 px-6 md:px-12 pt-32 lg:pt-16"
       style={{
         scrollMarginTop: "80px",
         backgroundImage: "url('/assets/mit.png')",
@@ -26,12 +25,12 @@ const Hero = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* Text Content */}
+      {/* Text Content - now centered since we removed the image */}
       <motion.div
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="lg:w-1/2 text-center lg:text-left mt-8 lg:mt-0 z-10"
+        className="w-full text-center z-10" // Changed to full width and centered
       >
         <motion.h1
           initial={{ opacity: 0, x: -50 }}
@@ -48,7 +47,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-lg md:text-xl mb-6 text-white"
+          className="text-lg md:text-xl mb-6 text-white max-w-3xl mx-auto" // Added max-width and mx-auto
         >
           Jointly organized by Muzaffarpur Institute Of Technology, Darbhanga
           College of Engineering, and Indian Society For Technical Education
@@ -57,7 +56,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-wrap gap-4 justify-center lg:justify-start"
+          className="flex flex-wrap gap-4 justify-center" // Always centered now
         >
           <motion.a
             href="#about"
@@ -80,7 +79,8 @@ const Hero = () => {
         </motion.div>
       </motion.div>
 
-      {/* Image (Conference Banner) */}
+      {/* Conference Banner Section */}
+      {/* 
       <motion.div
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -96,6 +96,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         />
       </motion.div>
+      */}
     </section>
   );
 };
