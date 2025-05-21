@@ -1,23 +1,31 @@
 import React from "react";
 import { motion } from "framer-motion";
-import heroImage from "../../public/assets/hero_img.webp"; // Ensure the correct path
+import heroImage from "../../public/assets/hero_img.webp";
 
 const Hero = () => {
+  // Function to handle PDF download
+  const handleDownload = () => {
+    const pdfUrl = "/assets/FinalSchedule.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "ICMIT-2025-Schedule.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section
       id="home"
-      className="relative flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen text-gray-900 px-6 pt-32 lg:pt-16 py-5" //removed md:px-12
+      className="relative flex flex-col-reverse lg:flex-row items-center justify-center min-h-screen text-gray-900 px-6 md:px-12 pt-32 lg:pt-16"
       style={{
         scrollMarginTop: "80px",
-        backgroundImage: "url('/assets/mit.png')", // Correct way to use public folder images
-        backgroundColor: "black", // Now applies correctly
+        backgroundImage: "url('/assets/mit.png')",
+        backgroundColor: "black",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      {/* REMOVE this overlay to see the red background */}
-      {/* <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div> */}
-
       {/* Text Content */}
       <motion.div
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -33,7 +41,7 @@ const Hero = () => {
         >
           1st International Conference on Mechanical & Industrial Technologies
           <span className="text-yellow-300">
-            <br /> (ICMIT - 2025)
+            <br /> (IC-MIT 2025)
           </span>
         </motion.h1>
         <motion.p
@@ -49,25 +57,35 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
+          className="flex flex-wrap gap-4 justify-center lg:justify-start"
         >
           <motion.a
             href="#about"
-            className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 text-lg"
+            className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 text-lg font-medium"
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
           >
             Learn More
           </motion.a>
+          <motion.button
+            onClick={handleDownload}
+            className="inline-block px-6 py-3 bg-yellow-500 text-gray-900 rounded-lg shadow-lg hover:bg-yellow-600 transition-all duration-300 text-lg font-medium"
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 1.1 }}
+          >
+            Download Schedule
+          </motion.button>
         </motion.div>
       </motion.div>
 
       {/* Image (Conference Banner) */}
-      {/* <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="lg:w-1/2 z-10" // z-10 to ensure image is above overlay
+        className="lg:w-1/2 z-10"
       >
         <motion.img
           src={heroImage}
@@ -77,7 +95,7 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         />
-      </motion.div> */}
+      </motion.div>
     </section>
   );
 };
