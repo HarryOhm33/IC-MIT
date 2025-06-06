@@ -1,8 +1,9 @@
 export default function ScrollingNotificationBar() {
   const notifications = [
-    "🚨 Abstract Submission Deadline Extended to April 20, 2025",
-    "📢 Full Length Paper Submissions Now Open! Visit Call for Papers section and click 'Submit' button",
-    "📩 Submit your abstract to: conference.me@mitmuzaffarpur.org",
+    // "🚨 Abstract Submission Deadline Extended to April 20, 2025",
+    // "📢 Full Length Paper Submissions Now Open! Visit Call for Papers section and click 'Submit' button",
+    // "📩 Submit your abstract to: conference.me@mitmuzaffarpur.org",
+    "📄 Abstract Proceedings has been updated! Go to Publications section to view",
   ];
 
   return (
